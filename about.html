@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>John Joshua | About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">John Joshua</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT PAGE -->
+    <section class="about-page">
+        <div class="about-page-container">
+            <h1>About Me</h1>
+
+            <div class="about-flex">
+                <!-- PROFILE IMAGE -->
+                <div class="about-image">
+                    <img src="ChatGPT Image Feb 13, 2026, 02_57_23 PM.png" alt="John Joshua">
+                </div>
+
+                <!-- DETAILS & HIGHLIGHTS -->
+                <div class="about-details">
+                    <p>
+                        I recently graduated with a <span class="highlight">BSc. in Information Technology</span> from 
+                        <span class="highlight">Dedan Kimathi University of Technology</span>. I have over 2 years of professional experience in technology.
+                    </p>
+
+                    <p>
+                        My interests include <span class="highlight">Artificial Intelligence</span>, 
+                        <span class="highlight">Cybersecurity</span>, <span class="highlight">Web Development</span>, and 
+                        <span class="highlight">IoT systems</span>. I enjoy solving complex problems and building secure, scalable solutions.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-box" onclick="toggleEducationBox(this)" style="cursor: pointer;">
+                            <h3>🎓 Education <span class="expand-icon" style="float: right;">+</span></h3>
+                            <p class="edu-summary">BSc. Information Technology (Graduated 2026)</p>
+                            <div class="edu-details" style="display: none; margin-top: 15px; font-size: 14px;">
+                                <p><strong>Degree:</strong> Bachelor of Science in Information Technology</p>
+                                <p><strong>University:</strong> Dedan Kimathi University of Technology</p>
+                                <p><strong>Duration:</strong> 2022 - 2026</p>
+                                <p><strong>GPA:</strong> 3.8/4.0</p>
+                                <p><strong>Relevant Courses:</strong> Data Structures, Web Development, Network Security, Database Management, AI & Machine Learning</p>
+                                <p><strong>Achievements:</strong> Dean's List, Best Project Award 2024</p>
+                            </div>
+                        </div>
+                        <div class="highlight-box">
+                            <h3>💼 Experience</h3>
+                            <p>2+ Years in Tech</p>
+                        </div>
+                        <div class="highlight-box" onclick="toggleCertifications(this)" style="cursor: pointer;">
+                            <h3>🏆 Certifications <span class="expand-icon" style="float: right;">+</span></h3>
+                            <p class="cert-summary">Networking & Cybersecurity</p>
+                            <div class="cert-details" style="display: none; margin-top: 15px; font-size: 14px;">
+                                <p><strong>Cisco Certified Network Security</strong> - Completed</p>
+                                <p><strong>Certified Cybersecurity</strong> - Completed</p>
+                                <p><strong>Certified Introduction to Networking</strong> - Completed</p>
+                                <p><strong>Huawei Certified Networking Associate</strong> - Completed</p>
+                                <p><strong>Introduction to IoT</strong> - Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills-page">
+        <div class="skills-container">
+            <h2>My Skills</h2>
+
+            <!-- Programming & Web Development -->
+            <div class="skill-category">
+                <h3>🌐 Web Development</h3>
+                <div class="skill">
+                    <span>HTML & CSS (Forms, Semantic Elements, Flexbox)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript (Control Structures, DOM, Async/Await)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>TypeScript (Enums, Generics, Classes)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>React (Functional Components, Vite Setup)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Fetch API & HTTP Requests</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Arrays, Objects, Sets, Maps</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 93%"></div></div>
+                </div>
+            </div>
+
+            <!-- AI & Data -->
+            <div class="skill-category">
+                <h3>🤖 Artificial Intelligence & Machine Learning</h3>
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>TensorFlow Lite (Image Matching)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 82%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Machine Learning & Deep Learning</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>AI for Cybersecurity</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+            </div>
+
+            <!-- Cybersecurity & Networking -->
+            <div class="skill-category">
+                <h3>🔐 Cybersecurity & Networking</h3>
+                <div class="skill">
+                    <span>Networking Fundamentals</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Penetration Testing</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Network Security</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Cybersecurity Principles & Information Security</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 87%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Hackathon Experience (Huawei Certifications)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 86%"></div></div>
+                </div>
+            </div>
+
+            <!-- IoT & Hardware -->
+            <div class="skill-category">
+                <h3>🌍 Internet of Things (IoT)</h3>
+                <div class="skill">
+                    <span>IoT-Based Monitoring Systems</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 82%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Real-Time Data Systems</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Arduino</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 83%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Raspberry Pi</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 78%"></div></div>
+                </div>
+            </div>
+
+            <!-- Mobile App Development -->
+            <div class="skill-category">
+                <h3>📱 Mobile App Development</h3>
+                <div class="skill">
+                    <span>Android Development (Java & Kotlin)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 87%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>RecyclerView Implementation</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>SQLite Database Integration</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Firebase Firestore</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 84%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>APK Generation & Deployment</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 82%"></div></div>
+                </div>
+            </div>
+
+            <!-- Database Management -->
+            <div class="skill-category">
+                <h3>🗄️ Database Management</h3>
+                <div class="skill">
+                    <span>MySQL</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 89%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>SQLite</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Firebase Firestore</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Database Design (CRUD, Reports, Summaries)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                </div>
+            </div>
+
+            <!-- Systems & Programming -->
+            <div class="skill-category">
+                <h3>🖥️ Systems & Programming</h3>
+                <div class="skill">
+                    <span>C++ (Multithreading, Socket Programming)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 84%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Qt Application Development</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Linux (Ubuntu)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 86%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Distributed Systems Concepts</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 79%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Modeling & Simulation (SimPy, M/M/c Queues)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 77%"></div></div>
+                </div>
+            </div>
+
+            <!-- Academic & Professional Strengths -->
+            <div class="skill-category">
+                <h3>🎓 Academic & Professional Strengths</h3>
+                <div class="skill">
+                    <span>Human-Computer Interaction (HCI)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Software Engineering Concepts</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>System Design & Documentation</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 87%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Problem-Solving & Critical Thinking</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Ability to Work Under Pressure</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function toggleEducationBox(box) {
+            const details = box.querySelector('.edu-details');
+            const icon = box.querySelector('.expand-icon');
+            const summary = box.querySelector('.edu-summary');
+            const isVisible = details.style.display !== 'none';
+            
+            if (!isVisible) {
+                details.style.display = 'block';
+                summary.style.display = 'none';
+                icon.textContent = '−';
+            } else {
+                details.style.display = 'none';
+                summary.style.display = 'block';
+                icon.textContent = '+';
+            }
+        }
+
+        function toggleCertifications(box) {
+            const details = box.querySelector('.cert-details');
+            const icon = box.querySelector('.expand-icon');
+            const summary = box.querySelector('.cert-summary');
+            const isVisible = details.style.display !== 'none';
+            
+            if (!isVisible) {
+                details.style.display = 'block';
+                summary.style.display = 'none';
+                icon.textContent = '−';
+            } else {
+                details.style.display = 'none';
+                summary.style.display = 'block';
+                icon.textContent = '+';
+            }
+        }
+
+    </script>
+
+</body>
+</html>

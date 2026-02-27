@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>John Joshua | Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">John Joshua</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-page">
+        <div class="contact-container">
+            <h1>Get In Touch</h1>
+            <p>Let's collaborate! Feel free to reach out through any of these channels.</p>
+
+            <!-- Contact Info Cards -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:johnomitijoshua@gmail.com?subject=Let's%20Connect%20-%20Portfolio">johnomitijoshua@gmail.com</a></p>
+                    <p class="info-text">Send me an email</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📱</div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/254757824227" target="_blank">+254 757 824 227</a></p>
+                    <p class="info-text">Message me on WhatsApp</p>
+                </div>
+
+                <div class="info-card" onclick="openMap()" style="cursor: pointer;">
+                    <div class="info-icon">📍</div>
+                    <h3>Location</h3>
+                    <p><a href="https://www.google.com/maps/search/Kahawa+Sukari,+Kiambu" target="_blank">Kahawa Sukari, Kiambu</a></p>
+                    <p class="info-text">Click to open map</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="form-section">
+                <h2>Send Me A Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="from_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="from_email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                    <p id="formStatus" style="text-align: center; margin-top: 15px; display: none; color: #3b82f6;"></p>
+                </form>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-section">
+                <h2>Connect With Me</h2>
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank" class="social-icon linkedin" title="LinkedIn">
+                        <span>in</span>
+                    </a>
+                    <a href="https://github.com/John-web57" target="_blank" class="social-icon github" title="GitHub">
+                        <span>⚙</span>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon twitter" title="Twitter">
+                        <span>𝕏</span>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon instagram" title="Instagram">
+                        <span>📷</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openMap() {
+            window.open("https://www.google.com/maps/search/Kahawa+Sukari,+Kiambu", "_blank");
+        }
+
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = document.getElementById("formStatus");
+
+        contactForm.addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const from_name = document.getElementById("from_name").value;
+            const from_email = document.getElementById("from_email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            // Show sending status
+            formStatus.textContent = "Sending...";
+            formStatus.style.display = "block";
+            formStatus.style.color = "#f59e0b";
+
+            try {
+                // Send to backend
+                const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        from_name: from_name,
+                        from_email: from_email,
+                        subject: subject,
+                        message: message
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    // Success
+                    formStatus.textContent = "✓ Message sent successfully! I'll get back to you soon.";
+                    formStatus.style.color = "#10b981";
+                    contactForm.reset();
+                    
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        formStatus.style.display = "none";
+                    }, 5000);
+                } else {
+                    // Error
+                    formStatus.textContent = "✗ " + (data.error || "Failed to send message. Please try again.");
+                    formStatus.style.color = "#ef4444";
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                formStatus.textContent = "✗ Network error. Please check your connection and try again.";
+                formStatus.style.color = "#ef4444";
+            }
+        });
+    </script>
+
+</body>
+</html>
