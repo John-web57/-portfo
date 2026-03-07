@@ -3,8 +3,13 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
+const { connectDB } = require('./db');
+const Contact = require('./models/Contact');
 
 dotenv.config();
+
+// Connect to database
+connectDB();
 
 const app = express();
 
@@ -49,6 +54,14 @@ app.post('/api/contact', async (req, res) => {
             return res.status(400).json({ error: 'All fields are required' });
         }
 
+        // Save to database
+        const contact = await Contact.create({
+            name: from_name,
+            email: from_email,
+            subject: subject,
+            message: message
+        });
+
         // Email to you
         const mailOptions = {
             from: process.env.EMAIL_USER,
@@ -86,16 +99,65 @@ app.post('/api/contact', async (req, res) => {
         await transporter.sendMail(mailOptions);
         await transporter.sendMail(confirmationEmail);
 
-        res.status(200).json({ 
-            success: true, 
-            message: 'Email sent successfully!' 
+        res.status(200).json({
+            success: true,
+            message: 'Email sent successfully!'
         });
 
     } catch (error) {
         console.error('Error sending email:', error);
-        res.status(500).json({ 
-            success: false, 
-            error: 'Failed to send email. Please try again.' 
+        res.status(500).json({
+            success: false,
+            error: 'Failed to send email. Please try again.'
+        });
+    }
+});
+
+// Get all contact submissions (admin endpoint)
+app.get('/api/contacts', async (req, res) => {
+    try {
+        const contacts = await Contact.findAll({
+            order: [['createdAt', 'DESC']]
+        });
+        res.status(200).json({
+            success: true,
+            data: contacts
+        });
+    } catch (error) {
+        console.error('Error fetching contacts:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to fetch contacts'
+        });
+    }
+});
+
+// Update contact status (admin endpoint)
+app.put('/api/contacts/:id', async (req, res) => {
+    try {
+        const { status } = req.body;
+        const [updatedRowsCount] = await Contact.update(
+            { status },
+            { where: { id: req.params.id } }
+        );
+
+        if (updatedRowsCount === 0) {
+            return res.status(404).json({
+                success: false,
+                error: 'Contact not found'
+            });
+        }
+
+        const contact = await Contact.findByPk(req.params.id);
+        res.status(200).json({
+            success: true,
+            data: contact
+        });
+    } catch (error) {
+        console.error('Error updating contact:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to update contact'
         });
     }
 });
