@@ -1,0 +1,3 @@
+EMAIL_USER=johnomitijoshua@gmail.com
+EMAIL_PASS=hhbz dytf mytd dzcs
+NODE_ENV=production

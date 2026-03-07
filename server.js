@@ -6,6 +6,17 @@ const path = require('path');
 const { connectDB } = require('./db');
 const Contact = require('./models/Contact');
 
+// Try to load SendGrid if available
+let sgMail;
+try {
+    sgMail = require('@sendgrid/mail');
+    if (process.env.SENDGRID_API_KEY) {
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    }
+} catch (error) {
+    console.log('SendGrid not configured, using Gmail fallback');
+}
+
 dotenv.config();
 
 // Connect to database
@@ -62,42 +73,93 @@ app.post('/api/contact', async (req, res) => {
             message: message
         });
 
-        // Email to you
-        const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: 'johnomitijoshua@gmail.com',
-            subject: `Portfolio Contact: ${subject}`,
-            html: `
-                <h2>New Contact Form Submission</h2>
-                <p><strong>Name:</strong> ${from_name}</p>
-                <p><strong>Email:</strong> ${from_email}</p>
-                <p><strong>Subject:</strong> ${subject}</p>
-                <p><strong>Message:</strong></p>
-                <p>${message.replace(/\n/g, '<br>')}</p>
-                <hr>
-                <p><em>Reply to: ${from_email}</em></p>
-            `
-        };
+        // Try to send emails using SendGrid first, then Gmail fallback
+        let emailSent = false;
 
-        // Confirmation email to sender
-        const confirmationEmail = {
-            from: process.env.EMAIL_USER,
-            to: from_email,
-            subject: 'Thank you for contacting me - John Joshua',
-            html: `
-                <h2>Thank You!</h2>
-                <p>Hi ${from_name},</p>
-                <p>Thank you for reaching out! I received your message and will get back to you as soon as possible.</p>
-                <p><strong>Your message:</strong></p>
-                <p>${subject}</p>
-                <hr>
-                <p>Best regards,<br>John Joshua</p>
-            `
-        };
+        try {
+            if (sgMail && process.env.SENDGRID_API_KEY) {
+                // SendGrid email to you
+                const sgMessageToYou = {
+                    to: 'johnomitijoshua@gmail.com',
+                    from: 'portfolio@yourdomain.com', // Replace with your verified sender
+                    subject: `Portfolio Contact: ${subject}`,
+                    html: `
+                        <h2>New Contact Form Submission</h2>
+                        <p><strong>Name:</strong> ${from_name}</p>
+                        <p><strong>Email:</strong> ${from_email}</p>
+                        <p><strong>Subject:</strong> ${subject}</p>
+                        <p><strong>Message:</strong></p>
+                        <p>${message.replace(/\n/g, '<br>')}</p>
+                        <hr>
+                        <p><em>Reply to: ${from_email}</em></p>
+                    `
+                };
 
-        // Send both emails
-        await transporter.sendMail(mailOptions);
-        await transporter.sendMail(confirmationEmail);
+                // SendGrid confirmation email to sender
+                const sgMessageToSender = {
+                    to: from_email,
+                    from: 'portfolio@yourdomain.com', // Replace with your verified sender
+                    subject: 'Thank you for contacting me - John Joshua',
+                    html: `
+                        <h2>Thank You!</h2>
+                        <p>Hi ${from_name},</p>
+                        <p>Thank you for reaching out! I received your message and will get back to you as soon as possible.</p>
+                        <p><strong>Your message:</strong></p>
+                        <p>${subject}</p>
+                        <hr>
+                        <p>Best regards,<br>John Joshua</p>
+                    `
+                };
+
+                await sgMail.send(sgMessageToYou);
+                await sgMail.send(sgMessageToSender);
+                emailSent = true;
+                console.log('✅ Emails sent via SendGrid');
+            }
+        } catch (sgError) {
+            console.log('SendGrid failed, trying Gmail fallback:', sgError.message);
+        }
+
+        // Gmail fallback if SendGrid failed or not configured
+        if (!emailSent) {
+            // Email to you
+            const mailOptions = {
+                from: process.env.EMAIL_USER,
+                to: 'johnomitijoshua@gmail.com',
+                subject: `Portfolio Contact: ${subject}`,
+                html: `
+                    <h2>New Contact Form Submission</h2>
+                    <p><strong>Name:</strong> ${from_name}</p>
+                    <p><strong>Email:</strong> ${from_email}</p>
+                    <p><strong>Subject:</strong> ${subject}</p>
+                    <p><strong>Message:</strong></p>
+                    <p>${message.replace(/\n/g, '<br>')}</p>
+                    <hr>
+                    <p><em>Reply to: ${from_email}</em></p>
+                `
+            };
+
+            // Confirmation email to sender
+            const confirmationEmail = {
+                from: process.env.EMAIL_USER,
+                to: from_email,
+                subject: 'Thank you for contacting me - John Joshua',
+                html: `
+                    <h2>Thank You!</h2>
+                    <p>Hi ${from_name},</p>
+                    <p>Thank you for reaching out! I received your message and will get back to you as soon as possible.</p>
+                    <p><strong>Your message:</strong></p>
+                    <p>${subject}</p>
+                    <hr>
+                    <p>Best regards,<br>John Joshua</p>
+                `
+            };
+
+            // Send both emails
+            await transporter.sendMail(mailOptions);
+            await transporter.sendMail(confirmationEmail);
+            console.log('✅ Emails sent via Gmail');
+        }
 
         res.status(200).json({
             success: true,
