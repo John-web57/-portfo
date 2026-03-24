@@ -1,16 +1,55 @@
 /* ================= GLOBAL RESET ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+:root {
+    --bg: #0f172a;
+    --text: #e2e8f0;
+    --card: rgba(15, 23, 42, 0.88);
+    --border: rgba(96, 165, 250, 0.25);
+    --accent: #3b82f6;
+    --accent-alt: #8b5cf6;
+    --link: #e2e8f0;
+    --nav-bg: rgba(15, 23, 42, 0.9);
+    --hero-bg: linear-gradient(135deg, #0f172a 0%, #13213f 52%, #0b1222 100%);
+    --section-bg: linear-gradient(180deg, #0f172a 0%, #111d36 100%);
+    --hero-text: #a9b7cc;
+    --muted: #cbd5e1;
 }
 
 body {
-    background: #0f172a;
-    color: #e2e8f0;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
 }
+
+body.light-mode {
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --card: rgba(255, 255, 255, 0.95);
+    --border: rgba(96, 165, 250, 0.25);
+    --accent: #3b82f6;
+    --accent-alt: #8b5cf6;
+    --link: #0f172a;
+    --nav-bg: rgba(255, 255, 255, 0.87);
+    --hero-bg: linear-gradient(135deg, #e2e8f5 0%, #dbe7f5 52%, #d2d9e3 100%);
+    --section-bg: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    --hero-text: #475569;
+    --muted: #475569;
+}
+
+body.dark-mode {
+    --bg: #0f172a;
+    --text: #e2e8f0;
+    --card: rgba(15, 23, 42, 0.88);
+    --border: rgba(96, 165, 250, 0.25);
+    --accent: #3b82f6;
+    --accent-alt: #8b5cf6;
+    --link: #e2e8f0;
+    --nav-bg: rgba(15, 23, 42, 0.9);
+    --hero-bg: linear-gradient(135deg, #0f172a 0%, #13213f 52%, #0b1222 100%);
+    --section-bg: linear-gradient(180deg, #0f172a 0%, #111d36 100%);
+    --hero-text: #a9b7cc;
+    --muted: #cbd5e1;
+}
+
 
 section {
     padding: 120px 10%;
