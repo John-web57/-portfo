@@ -23,31 +23,118 @@
         </ul>
     </nav>
 
-    <section class="blog-list">
-        <div class="container">
-            <h1>Tech Blog</h1>
-            <p>Insights on web development, AI, cybersecurity, and deployment best practices.</p>
+    <section class="blog-page">
+        <div class="blog-page-container">
+            <div class="blog-hero">
+                <div class="blog-hero-copy">
+                    <p class="section-kicker">Tech Blog</p>
+                    <h1>Ideas, Build Notes, and Practical Lessons From My Work</h1>
+                    <p>
+                        I write about web development, AI, cybersecurity, and deployment with a focus on
+                        practical implementation, clean architecture, and real-world problem-solving.
+                    </p>
+                    <div class="blog-topic-pills">
+                        <span>Web Development</span>
+                        <span>AI</span>
+                        <span>Cybersecurity</span>
+                        <span>Deployment</span>
+                    </div>
+                </div>
 
-            <article class="blog-post">
-                <h2>1. Building a Secure Node.js API</h2>
-                <p>Learn validation, authentication, logging, and rate limiting for real-world Node.js backends.</p>
-                <a href="#" class="btn">Read Full Post</a>
-            </article>
+                <article class="blog-featured-card">
+                    <p class="blog-featured-label">Featured Post</p>
+                    <h2>Building a Secure Node.js API</h2>
+                    <p>
+                        A practical walkthrough of validation, authentication, logging, and rate limiting
+                        for production-ready Express backends.
+                    </p>
+                    <div class="blog-meta-row">
+                        <span>Backend Security</span>
+                        <span>8 min read</span>
+                    </div>
+                    <button
+                        type="button"
+                        class="btn blog-open-post"
+                        data-post-id="secure-node-api"
+                    >
+                        Read Full Post
+                    </button>
+                </article>
+            </div>
 
-            <article class="blog-post">
-                <h2>2. Prompt Engineering for AI Models</h2>
-                <p>How to create better prompts for consistent results with large language models.</p>
-                <a href="#" class="btn">Read Full Post</a>
-            </article>
+            <div class="blog-toolbar">
+                <div class="blog-filter-group" role="tablist" aria-label="Blog categories">
+                    <button type="button" class="blog-filter active" data-filter="all">All</button>
+                    <button type="button" class="blog-filter" data-filter="web">Web</button>
+                    <button type="button" class="blog-filter" data-filter="ai">AI</button>
+                    <button type="button" class="blog-filter" data-filter="security">Security</button>
+                    <button type="button" class="blog-filter" data-filter="deploy">Deploy</button>
+                </div>
+                <p class="blog-toolbar-note">Select a category to filter posts, then open any article in the reader panel.</p>
+            </div>
 
-            <article class="blog-post">
-                <h2>3. Deploying an Express App on Render</h2>
-                <p>Deploy process, environment variables, health checks, and production hardening.</p>
-                <a href="#" class="btn">Read Full Post</a>
-            </article>
+            <div class="blog-layout">
+                <div class="blog-post-grid">
+                    <article class="blog-post-card" data-category="security web">
+                        <p class="blog-card-category">Security · Web</p>
+                        <h3>Building a Secure Node.js API</h3>
+                        <p>
+                            Learn how I structure validation, authentication, logging, and rate limiting
+                            for safer backend services.
+                        </p>
+                        <div class="blog-meta-row">
+                            <span>Express</span>
+                            <span>8 min read</span>
+                        </div>
+                        <button type="button" class="btn blog-open-post" data-post-id="secure-node-api">Read Full Post</button>
+                    </article>
+
+                    <article class="blog-post-card" data-category="ai">
+                        <p class="blog-card-category">AI</p>
+                        <h3>Prompt Engineering for AI Models</h3>
+                        <p>
+                            A practical guide to writing clearer prompts that improve consistency, quality,
+                            and control when working with language models.
+                        </p>
+                        <div class="blog-meta-row">
+                            <span>Prompt Design</span>
+                            <span>6 min read</span>
+                        </div>
+                        <button type="button" class="btn blog-open-post" data-post-id="prompt-engineering">Read Full Post</button>
+                    </article>
+
+                    <article class="blog-post-card" data-category="deploy web">
+                        <p class="blog-card-category">Deploy · Web</p>
+                        <h3>Deploying an Express App on Render</h3>
+                        <p>
+                            The deployment workflow I use for environment variables, health checks,
+                            production hardening, and smooth updates.
+                        </p>
+                        <div class="blog-meta-row">
+                            <span>Render</span>
+                            <span>7 min read</span>
+                        </div>
+                        <button type="button" class="btn blog-open-post" data-post-id="deploy-render">Read Full Post</button>
+                    </article>
+                </div>
+
+                <aside class="blog-reader-card">
+                    <p class="blog-reader-label">Article Reader</p>
+                    <h2 id="blog-reader-title">Building a Secure Node.js API</h2>
+                    <div class="blog-reader-meta" id="blog-reader-meta">Backend Security · 8 min read</div>
+                    <div class="blog-reader-content" id="blog-reader-content">
+                        <p>Security should be part of the design of a backend from the beginning, not something added later when problems appear.</p>
+                        <p>When I build a Node.js API, I usually start with strong validation. Every request should be checked before it touches the database or any sensitive logic. That reduces bad input, avoids unnecessary processing, and makes the service easier to trust.</p>
+                        <p>I then focus on authentication and authorization. Authentication confirms who the user is, while authorization controls what they are allowed to do. Keeping those responsibilities clear makes route protection simpler and safer.</p>
+                        <p>Logging is also important. Good logs help track suspicious behavior, monitor errors, and improve debugging in production. I prefer logs that are structured enough to support monitoring without exposing sensitive data.</p>
+                        <p>Finally, rate limiting is one of the easiest ways to reduce abuse. It protects the API from brute-force attempts, automated scraping, and accidental traffic spikes. Combined with clean validation and access control, it creates a much stronger backend foundation.</p>
+                    </div>
+                </aside>
+            </div>
         </div>
     </section>
 
     <script src="theme-toggle.js"></script>
+    <script src="blog.js"></script>
 </body>
 </html>

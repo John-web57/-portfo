@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>John Joshua | AI Chat Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">John Joshua</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button id="theme-toggle" class="btn">🌙 Dark</button></li>
+        </ul>
+    </nav>
+
+    <section class="ai-demo-page">
+        <div class="ai-demo-container">
+            <div class="ai-demo-hero">
+                <div>
+                    <p class="section-kicker">Live Demo</p>
+                    <h1>AI Chatbot Assistant</h1>
+                    <p>
+                        I built this OpenAI-powered chatbot demo for my portfolio so visitors can interact with my work directly.
+                        It answers questions in real time and shows how I design AI experiences for the web.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-badge">Real-Time Responses</span>
+                        <span class="skill-badge">OpenAI API</span>
+                        <span class="skill-badge">Responsive UI</span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="projects.html" class="btn secondary">Back to Projects</a>
+                </div>
+            </div>
+
+            <div class="ai-demo-layout">
+                <div class="ai-chat-card ai-demo-chat">
+                    <div class="ai-chat-header">
+                        <div>
+                            <h3>Try AI Chat</h3>
+                            <p>Ask about my chatbot, my process, or the project stack</p>
+                        </div>
+                        <span class="ai-status" id="ai-status">Ready</span>
+                    </div>
+                    <p class="ai-mode-note" id="ai-mode-note">Live mode when connected to the server. Offline demo mode activates automatically if the API is unavailable.</p>
+
+                    <div class="ai-chat-messages" id="ai-chat-messages">
+                        <article class="ai-message ai-message-bot">
+                            <p>
+                                Welcome to my live AI demo. Ask what the chatbot does, what stack I used,
+                                or how I designed it to support my portfolio.
+                            </p>
+                        </article>
+                    </div>
+
+                    <form class="ai-chat-form" id="ai-chat-form">
+                        <label class="sr-only" for="ai-user-input">Try the AI chat demo</label>
+                        <textarea
+                            id="ai-user-input"
+                            name="message"
+                            rows="3"
+                            placeholder="Example: What tech stack powers this chatbot?"
+                            required
+                        ></textarea>
+                        <div class="ai-chat-actions">
+                            <button type="submit" class="btn">Send Message</button>
+                            <button type="button" class="btn secondary" id="ai-clear-chat">Clear</button>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="ai-demo-sidebar">
+                    <div class="demo-info-card">
+                        <h3>Project Summary</h3>
+                        <p>I built this chatbot using the OpenAI API with a Node.js backend and a clean HTML, CSS, and JavaScript interface that I designed for my portfolio.</p>
+                    </div>
+
+                    <div class="demo-info-card">
+                        <h3>What It Shows</h3>
+                        <ul class="demo-list">
+                            <li>Live AI interaction</li>
+                            <li>Real-time answers</li>
+                            <li>Portfolio integration</li>
+                            <li>Recruiter-friendly UX</li>
+                        </ul>
+                    </div>
+
+                    <div class="demo-info-card">
+                        <h3>Best Questions</h3>
+                        <p>"What does this AI chatbot do?"</p>
+                        <p>"What tech stack did you use?"</p>
+                        <p>"How did you design this experience?"</p>
+                    </div>
+                </aside>
+            </div>
+
+            <section class="demo-screens">
+                <div class="ai-visual-header">
+                    <p class="section-kicker">Interface Preview</p>
+                    <h2>Screenshots-Style Showcase</h2>
+                    <p>These panels highlight the chat UI, response flow, and the design choices I used in the build.</p>
+                </div>
+
+                <div class="ai-showcase-grid">
+                    <article class="showcase-shot">
+                        <div class="showcase-window">
+                            <div class="mini-chat-bar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="showcase-screen showcase-screen-chat">
+                                <div class="showcase-chip-row">
+                                    <span class="showcase-chip">Demo Ready</span>
+                                    <span class="showcase-chip">My Build</span>
+                                </div>
+                                <div class="showcase-convo">
+                                    <div class="showcase-bubble showcase-bubble-bot">Welcome to my AI chatbot demo.</div>
+                                    <div class="showcase-bubble showcase-bubble-user">What stack powers this project?</div>
+                                    <div class="showcase-bubble showcase-bubble-bot">I built it with HTML, CSS, JavaScript, Node.js, and OpenAI API integration.</div>
+                                </div>
+                                <div class="showcase-caption">
+                                    <h3>UI Layout</h3>
+                                    <p>I designed this assistant-style layout to feel polished, live, and credible during portfolio review and demos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="showcase-shot">
+                        <div class="showcase-window">
+                            <div class="mini-chat-bar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="showcase-screen showcase-screen-metrics">
+                                <div class="showcase-stat-grid">
+                                    <div class="showcase-stat-card">
+                                        <strong>Clean</strong>
+                                        <span>Conversation flow</span>
+                                    </div>
+                                    <div class="showcase-stat-card">
+                                        <strong>Fast</strong>
+                                        <span>Interactive feel</span>
+                                    </div>
+                                    <div class="showcase-stat-card">
+                                        <strong>Scoped</strong>
+                                        <span>Portfolio answers</span>
+                                    </div>
+                                    <div class="showcase-stat-card">
+                                        <strong>Mobile</strong>
+                                        <span>Responsive design</span>
+                                    </div>
+                                </div>
+                                <div class="showcase-caption">
+                                    <h3>Response Experience</h3>
+                                    <p>I used message cards and stat blocks to help visitors understand both the function and the quality of the build quickly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="showcase-shot">
+                        <div class="showcase-window">
+                            <div class="mini-chat-bar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="showcase-screen showcase-screen-features">
+                                <div class="showcase-feature-list">
+                                    <div class="showcase-feature-item">Live chat demo with a working endpoint</div>
+                                    <div class="showcase-feature-item">Fallback behavior when the API key is missing</div>
+                                    <div class="showcase-feature-item">Visual framing that reflects my design choices</div>
+                                </div>
+                                <div class="showcase-caption">
+                                    <h3>Core Features</h3>
+                                    <p>I shaped the mockup like a product snapshot so the project stands out faster and feels intentionally designed.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="theme-toggle.js"></script>
+    <script src="ai-assistant.js"></script>
+</body>
+</html>

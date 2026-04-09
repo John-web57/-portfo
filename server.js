@@ -6,6 +6,8 @@ const path = require('path');
 const { connectDB } = require('./db');
 const Contact = require('./models/Contact');
 
+dotenv.config();
+
 // Try to load SendGrid if available
 let sgMail;
 try {
@@ -16,8 +18,6 @@ try {
 } catch (error) {
     console.log('SendGrid not configured, using Gmail fallback');
 }
-
-dotenv.config();
 
 // Connect to database
 connectDB();
@@ -44,6 +44,144 @@ app.get('/about.html', (req, res) => {
 
 app.get('/projects.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'projects.html'));
+});
+
+app.get('/ai-chat.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'ai-chat.html'));
+});
+
+const portfolioContext = `
+You are the AI assistant for John Joshua's portfolio.
+Use this information when answering:
+- Answer in first person as John when describing the project work, design choices, skills, and experience.
+- John Joshua is an IT graduate and web developer with strong interest in AI, cybersecurity, and practical digital products.
+- The portfolio highlights web development, AI/ML, cybersecurity, and IoT.
+- He studied BSc. Information Technology at Dedan Kimathi University of Technology from 2022 to 2026 and has Dean's List recognition.
+- He is open to internships, freelance projects, and collaboration.
+- Visitors can explore Projects, Case Studies, Blog, About, and Contact pages to learn more or reach out.
+- Keep responses concise, helpful, professional, and portfolio-focused.
+- If a question asks for information not available in the portfolio, say so clearly and invite the visitor to contact John directly.
+`.trim();
+
+const fallbackResponses = [
+    {
+        keywords: ['skill', 'stack', 'technology', 'technologies', 'tools'],
+        reply: 'I work across web development, AI/ML, cybersecurity, and IoT. My portfolio especially emphasizes practical web solutions, intelligent systems, and secure digital products.'
+    },
+    {
+        keywords: ['education', 'study', 'university', 'degree'],
+        reply: 'I studied BSc. Information Technology at Dedan Kimathi University of Technology from 2022 to 2026, with Dean\'s List recognition highlighted in my portfolio.'
+    },
+    {
+        keywords: ['project', 'projects', 'build', 'built'],
+        reply: 'I build practical web applications and I am especially interested in intelligent systems, cybersecurity-focused solutions, and IoT projects. The Projects and Case Studies pages are the best place to explore specific work.'
+    },
+    {
+        keywords: ['ai', 'machine learning', 'prompt', 'llm'],
+        reply: 'AI is one of my core focus areas. I am especially interested in intelligent systems, prompt engineering, and practical AI-driven solutions.'
+    },
+    {
+        keywords: ['hire', 'available', 'freelance', 'internship', 'collaborate', 'contact'],
+        reply: 'I am open to internships, freelance work, and collaborations. The fastest next step is through the Contact page if you want to discuss a role or project.'
+    }
+];
+
+function buildFallbackReply(message) {
+    const normalizedMessage = message.toLowerCase();
+    const matchedResponse = fallbackResponses.find((entry) =>
+        entry.keywords.some((keyword) => normalizedMessage.includes(keyword))
+    );
+
+    if (matchedResponse) {
+        return matchedResponse.reply;
+    }
+
+    return 'I am an IT graduate and developer focused on web development, AI, cybersecurity, and practical problem-solving. If you want details about a project, skill set, or collaboration opportunity, ask that directly or use the Contact page.';
+}
+
+async function getOpenAIReply(message) {
+    if (!process.env.OPENAI_API_KEY) {
+        return null;
+    }
+
+    if (typeof fetch !== 'function') {
+        throw new Error('Fetch is not available in this Node runtime.');
+    }
+
+    const response = await fetch('https://api.openai.com/v1/responses', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${process.env.OPENAI_API_KEY}`
+        },
+        body: JSON.stringify({
+            model: process.env.OPENAI_MODEL || 'gpt-4.1-mini',
+            input: [
+                {
+                    role: 'system',
+                    content: [
+                        {
+                            type: 'input_text',
+                            text: portfolioContext
+                        }
+                    ]
+                },
+                {
+                    role: 'user',
+                    content: [
+                        {
+                            type: 'input_text',
+                            text: message
+                        }
+                    ]
+                }
+            ]
+        })
+    });
+
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`OpenAI request failed: ${response.status} ${errorText}`);
+    }
+
+    const data = await response.json();
+    return data.output_text ? data.output_text.trim() : null;
+}
+
+app.post('/api/ai', async (req, res) => {
+    try {
+        const { message } = req.body;
+
+        if (!message || typeof message !== 'string' || !message.trim()) {
+            return res.status(400).json({
+                error: 'A message is required.'
+            });
+        }
+
+        const cleanMessage = message.trim().slice(0, 1000);
+
+        try {
+            const openAIReply = await getOpenAIReply(cleanMessage);
+            if (openAIReply) {
+                return res.status(200).json({
+                    reply: openAIReply,
+                    source: 'openai'
+                });
+            }
+        } catch (openAIError) {
+            console.error('OpenAI assistant error:', openAIError.message);
+        }
+
+        return res.status(200).json({
+            reply: buildFallbackReply(cleanMessage),
+            source: 'fallback'
+        });
+    } catch (error) {
+        console.error('AI endpoint error:', error);
+        res.status(500).json({
+            error: 'Failed to generate AI response.'
+        });
+    }
 });
 
 // Email configuration

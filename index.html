@@ -81,6 +81,59 @@
         </div>
     </section>
 
+    <section class="ai-assistant-section">
+        <div class="ai-assistant-container">
+            <div class="ai-assistant-copy">
+                <p class="section-kicker">AI Experience</p>
+                <h2>Chat With My Portfolio AI Assistant</h2>
+                <p>
+                    Ask about my skills, projects, availability, education, or the kind of work I enjoy building.
+                    This assistant is designed to give visitors a faster way to learn about me.
+                </p>
+                <div class="ai-capabilities">
+                    <span>Project Guidance</span>
+                    <span>Skills Overview</span>
+                    <span>Career Snapshot</span>
+                </div>
+            </div>
+
+            <div class="ai-chat-card">
+                <div class="ai-chat-header">
+                    <div>
+                        <h3>John AI Assistant</h3>
+                        <p>Ask a question and get an instant response</p>
+                    </div>
+                    <span class="ai-status" id="ai-status">Ready</span>
+                </div>
+                <p class="ai-mode-note" id="ai-mode-note">Live mode when connected to the server. Offline demo mode activates automatically if the API is unavailable.</p>
+
+                <div class="ai-chat-messages" id="ai-chat-messages">
+                    <article class="ai-message ai-message-bot">
+                        <p>
+                            Hi, I'm the AI assistant for my portfolio. Ask about my web development work,
+                            AI projects, cybersecurity focus, education, or availability for projects.
+                        </p>
+                    </article>
+                </div>
+
+                <form class="ai-chat-form" id="ai-chat-form">
+                    <label class="sr-only" for="ai-user-input">Ask the portfolio assistant</label>
+                    <textarea
+                        id="ai-user-input"
+                        name="message"
+                        rows="3"
+                        placeholder="Example: What kind of AI projects did you build?"
+                        required
+                    ></textarea>
+                    <div class="ai-chat-actions">
+                        <button type="submit" class="btn">Ask AI</button>
+                        <button type="button" class="btn secondary" id="ai-clear-chat">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <section class="blog-preview">
         <div class="container">
             <h2>Latest Tech Posts</h2>
@@ -106,5 +159,6 @@
     </section>
 
     <script src="theme-toggle.js"></script>
+    <script src="ai-assistant.js"></script>
 </body>
 </html>
