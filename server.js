@@ -104,48 +104,43 @@ async function getOpenAIReply(message) {
         return null;
     }
 
-    if (typeof fetch !== 'function') {
-        throw new Error('Fetch is not available in this Node runtime.');
+    try {
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${process.env.OPENAI_API_KEY}`
+            },
+            body: JSON.stringify({
+                model: process.env.OPENAI_MODEL || 'gpt-3.5-turbo',
+                messages: [
+                    {
+                        role: 'system',
+                        content: portfolioContext
+                    },
+                    {
+                        role: 'user',
+                        content: message
+                    }
+                ],
+                temperature: 0.7,
+                max_tokens: 500
+            })
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`OpenAI request failed: ${response.status} ${errorText}`);
+        }
+
+        const data = await response.json();
+        return data.choices && data.choices[0] && data.choices[0].message 
+            ? data.choices[0].message.content.trim() 
+            : null;
+    } catch (error) {
+        console.error('OpenAI API error:', error.message);
+        return null;
     }
-
-    const response = await fetch('https://api.openai.com/v1/responses', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${process.env.OPENAI_API_KEY}`
-        },
-        body: JSON.stringify({
-            model: process.env.OPENAI_MODEL || 'gpt-4.1-mini',
-            input: [
-                {
-                    role: 'system',
-                    content: [
-                        {
-                            type: 'input_text',
-                            text: portfolioContext
-                        }
-                    ]
-                },
-                {
-                    role: 'user',
-                    content: [
-                        {
-                            type: 'input_text',
-                            text: message
-                        }
-                    ]
-                }
-            ]
-        })
-    });
-
-    if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`OpenAI request failed: ${response.status} ${errorText}`);
-    }
-
-    const data = await response.json();
-    return data.output_text ? data.output_text.trim() : null;
 }
 
 app.post('/api/ai', async (req, res) => {

@@ -1,53 +1,81 @@
-# Portfolio Backend
+# John Joshua Portfolio
 
-A Node.js backend server for a portfolio website with contact form functionality and database integration.
+A full-stack portfolio website showcasing projects, skills, and experience with AI chatbot integration and contact management.
 
-## Features
+## 🌟 Features
 
-- **Static File Serving**: Serves HTML, CSS, and static assets
-- **Contact Form**: Handles contact form submissions with email notifications
-- **Database Integration**: Stores contact form submissions in SQLite database
-- **Email Notifications**: Sends confirmation emails to both sender and recipient
-- **Admin API**: Endpoints to manage contact submissions
+- **Responsive Portfolio**: Modern, clean design with multiple sections
+- **AI Chat Assistant**: OpenAI-powered chatbot with fallback responses
+- **Contact Form**: Submit messages with email notifications
+- **Dark/Light Theme**: Toggle between themes with persistent storage
+- **Blog System**: Read and filter blog posts
+- **Database**: SQLite for storing contact submissions
+- **Email Notifications**: Gmail or SendGrid email confirmations
+- **Admin API**: Manage contact submissions
 
-## Tech Stack
+## 🛠️ Tech Stack
 
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript
 - **Backend**: Node.js, Express.js
 - **Database**: SQLite with Sequelize ORM
-- **Email**: Nodemailer with Gmail SMTP
-- **Environment**: dotenv for configuration
+- **AI**: OpenAI API integration
+- **Email**: Nodemailer (Gmail) & SendGrid
+- **Hosting**: Compatible with Render.com
 
-## Installation
+## 📖 Documentation
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up environment variables (copy `.env.example` to `.env`):
-   ```bash
-   cp .env.example .env
-   ```
-4. Configure your Gmail credentials in `.env`
-5. Start the development server:
-   ```bash
-   npm run dev
-   ```
+**👉 START HERE:** [QUICK_START.md](QUICK_START.md) - 5-minute setup
 
-## Environment Variables
+**Full Guide:** [SETUP_GUIDE.md](SETUP_GUIDE.md) - Complete documentation
 
-Create a `.env` file with the following variables:
+## 🚀 Quick Start
 
-```env
-# Gmail credentials for contact form
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
+```bash
+# 1. Copy environment template
+cp .env.example .env
 
-# Server port
-PORT=3000
+# 2. Edit .env with your credentials (Gmail App Password, OpenAI key, etc)
+# See .env.example for detailed instructions
+
+# 3. Install dependencies
+npm install
+
+# 4. Start server
+npm start
+
+# 5. Visit http://localhost:5000
 ```
 
-## API Endpoints
+## 📋 Configuration
+
+All configuration happens in `.env` file. Copy from `.env.example` and add:
+
+- **Gmail**: Email address and App Password
+- **OpenAI**: API key for live AI chat (optional)
+- **Port**: Server port (default 5000)
+- **SendGrid**: Alternative email service (optional)
+
+For detailed instructions on getting credentials, see [SETUP_GUIDE.md](SETUP_GUIDE.md)
+
+## ✅ What's Fixed & Ready
+
+### Recent Improvements ✨
+- ✅ Fixed OpenAI API endpoint (now using correct `/v1/chat/completions`)
+- ✅ Updated request body format for ChatGPT compatibility
+- ✅ Added complete `.env.example` with detailed configuration instructions
+- ✅ Enhanced error handling for OpenAI and email services
+- ✅ Contact form fully functional with database persistence
+- ✅ Email notifications working (Gmail + SendGrid fallback)
+- ✅ AI chat works offline with fallback responses
+- ✅ Dark/Light theme toggle working
+- ✅ Blog system functional
+- ✅ Theme preferences saved to localStorage
+
+### API Features
+- **AI Chat**: `/api/ai` - Get AI responses with fallback
+- **Contact**: `/api/contact` - Submit contact form
+- **Admin**: `/api/contacts` - View submissions
+- **Admin**: `/api/contacts/:id` - Update status
 
 ### Public Endpoints
 
