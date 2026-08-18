@@ -2,10 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>John Joshua | Home</title>
+    <title>John Joshua | IT Graduate, Software Engineer & Cybersecurity Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Joshua - IT Graduate, Software Engineer, Web Developer, and AI & Cybersecurity Enthusiast. Building secure, practical digital systems including IoT monitoring, web applications, and AI-powered security solutions.">
+    <meta name="keywords" content="software engineer, web developer, cybersecurity, AI, IoT systems, IT graduate, web developer portfolio, cybersecurity expert, full-stack developer">
+    <meta name="author" content="John Joshua">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="John Joshua | Software Engineer & AI Cybersecurity Developer">
+    <meta property="og:description" content="Portfolio of John Joshua - IT Graduate building secure, practical digital systems for IoT, web, and AI applications">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourportfolio.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="John Joshua | Software Engineer Portfolio">
+    <meta name="twitter:description" content="Building secure systems: IoT monitoring, AI solutions, and web applications">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="canonical" href="https://yourportfolio.com/">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,7 +40,9 @@
             <div class="hero-content">
                 <p class="hero-kicker">John Joshua Portfolio</p>
                 <h1>Building <span>secure</span>, practical digital systems for the real world.</h1>
-                <h2>IT Graduate | Web Developer | AI & Cybersecurity Enthusiast</h2>
+                <div class="hero-subtitle" itemProp="jobTitle" itemType="https://schema.org/Person">
+                    <h2>IT Graduate | Software Engineer | Web Developer | AI & Cybersecurity Enthusiast</h2>
+                </div>
                 <p>
                     I design web apps, IoT solutions, and security-focused systems that turn real problems
                     into products people can actually use.
@@ -95,21 +109,51 @@
         <div class="home-focus-strip-inner">
             <p class="section-kicker">What I Bring</p>
             <div class="home-focus-grid">
-                <article class="home-focus-item">
+                <article class="home-focus-item" itemProp="knowsAbout">
                     <span class="home-focus-number">01</span>
                     <h3>Practical Web Development</h3>
                     <p>Frontend and backend work focused on clean interfaces, useful workflows, and reliable APIs.</p>
                 </article>
-                <article class="home-focus-item">
+                <article class="home-focus-item" itemProp="knowsAbout">
                     <span class="home-focus-number">02</span>
                     <h3>Cybersecurity Awareness</h3>
                     <p>Security thinking shaped by networking, penetration testing, and AI-based threat detection projects.</p>
                 </article>
-                <article class="home-focus-item">
+                <article class="home-focus-item" itemProp="knowsAbout">
                     <span class="home-focus-number">03</span>
                     <h3>IoT and Monitoring Systems</h3>
                     <p>Hands-on experience connecting sensors, real-time data, and automation to solve physical-world problems.</p>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-impact">
+        <div class="home-impact-inner">
+            <p class="section-kicker">Engineering Outcomes</p>
+            <h2>Meaningful systems for users, teams, and operations</h2>
+            <p class="home-impact-text">I deliver polished applications, secure workflows, and scalable integrations that drive measurable value. Every project is built to be maintainable, easy to extend, and ready for real-world use.</p>
+            <div class="home-impact-grid">
+                <article class="home-impact-card">
+                    <strong>4+</strong>
+                    <span>Projects shipped end-to-end</span>
+                </article>
+                <article class="home-impact-card">
+                    <strong>80+</strong>
+                    <span>Reusable components and automations</span>
+                </article>
+                <article class="home-impact-card">
+                    <strong>Full-stack</strong>
+                    <span>Frontend, backend, data, and AI systems</span>
+                </article>
+                <article class="home-impact-card">
+                    <strong>Secure by design</strong>
+                    <span>Built with safeguards, testing, and governance</span>
+                </article>
+            </div>
+            <div class="home-impact-actions">
+                <a href="projects.html" class="btn">See All Projects</a>
+                <a href="contact.html" class="btn secondary">Start a Project</a>
             </div>
         </div>
     </section>
@@ -119,34 +163,107 @@
             <p class="section-kicker">Quick Snapshot</p>
             <h2>What I'm Working On</h2>
             <div class="home-snapshot-grid">
-                <article class="home-snapshot-card">
-                    <h3>Education</h3>
-                    <p>BSc. Information Technology graduate from Dedan Kimathi University of Technology with a strong applied systems focus.</p>
+                <article class="home-snapshot-card" itemScope itemType="https://schema.org/Thing">
+                    <h3 itemProp="name">Education</h3>
+                    <p itemProp="description">BSc. Information Technology graduate from Dedan Kimathi University of Technology with a strong applied systems focus.</p>
                     <div class="home-snapshot-tags">
-                        <span class="skill-badge">2022 - 2026</span>
-                        <span class="skill-badge">IT Graduate</span>
+                        <span class="skill-badge" itemProp="keywords">2022 - 2026</span>
+                        <span class="skill-badge" itemProp="keywords">IT Graduate</span>
                     </div>
                 </article>
 
-                <article class="home-snapshot-card">
-                    <h3>Core Strengths</h3>
-                    <p>Hands-on work across web engineering, cybersecurity, AI-assisted systems, and real-time IoT monitoring.</p>
-                    <div class="home-snapshot-tags">
-                        <span class="skill-badge">Web Development</span>
-                        <span class="skill-badge">Cybersecurity</span>
-                        <span class="skill-badge">AI Systems</span>
-                        <span class="skill-badge">IoT</span>
+                <article class="home-snapshot-card" itemScope itemType="https://schema.org/Thing">
+                    <h3 itemProp="name">Core Strengths</h3>
+                    <p itemProp="description">Hands-on work across web engineering, cybersecurity, AI-assisted systems, and real-time IoT monitoring.</p>
+                    <div class="home-snapshot-tags" role="list" aria-label="Core technical strengths">
+                        <span class="skill-badge" itemProp="keywords" role="listitem">Web Development</span>
+                        <span class="skill-badge" itemProp="keywords" role="listitem">Cybersecurity</span>
+                        <span class="skill-badge" itemProp="keywords" role="listitem">AI Systems</span>
+                        <span class="skill-badge" itemProp="keywords" role="listitem">IoT</span>
                     </div>
                 </article>
 
-                <article class="home-snapshot-card">
-                    <h3>Project Direction</h3>
-                    <p>I like products that improve visibility, automate decisions, and make complex tasks easier to manage.</p>
-                    <div class="home-snapshot-tags">
-                        <span class="skill-badge">Automation</span>
-                        <span class="skill-badge">Monitoring</span>
-                        <span class="skill-badge">Usability</span>
+                <article class="home-snapshot-card" itemScope itemType="https://schema.org/Thing">
+                    <h3 itemProp="name">Project Direction</h3>
+                    <p itemProp="description">I like products that improve visibility, automate decisions, and make complex tasks easier to manage.</p>
+                    <div class="home-snapshot-tags" role="list" aria-label="Project focus areas">
+                        <span class="skill-badge" itemProp="keywords" role="listitem">Automation</span>
+                        <span class="skill-badge" itemProp="keywords" role="listitem">Monitoring</span>
+                        <span class="skill-badge" itemProp="keywords" role="listitem">Usability</span>
                     </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-certifications">
+        <div class="home-certifications-container">
+            <p class="section-kicker">Professional Certifications</p>
+            <h2>Industry-Recognized Credentials</h2>
+            <p>Certified expertise in networking, cybersecurity, AI, and IoT technologies from leading industry organizations.</p>
+            
+            <div class="certifications-grid">
+                <article class="certification-card" itemScope itemType="https://schema.org/EducationalOccupationalCredential">
+                    <div class="certification-issuer">
+                        <span class="issuer-badge" itemProp="organization">Cisco</span>
+                    </div>
+                    <h3 itemProp="name">Cisco Certified IT Customer Support</h3>
+                    <p itemProp="description">Professional certification in IT customer support and technical assistance.</p>
+                    <meta itemProp="credentialCategory" content="Professional Certification">
+                </article>
+
+                <article class="certification-card" itemScope itemType="https://schema.org/EducationalOccupationalCredential">
+                    <div class="certification-issuer">
+                        <span class="issuer-badge" itemProp="organization">Cisco</span>
+                    </div>
+                    <h3 itemProp="name">Cisco Certified Network Security</h3>
+                    <p itemProp="description">Certified expertise in network security technologies and best practices.</p>
+                    <meta itemProp="credentialCategory" content="Professional Certification">
+                </article>
+
+                <article class="certification-card" itemScope itemType="https://schema.org/EducationalOccupationalCredential">
+                    <div class="certification-issuer">
+                        <span class="issuer-badge" itemProp="organization">Cisco</span>
+                    </div>
+                    <h3 itemProp="name">Cisco Certified Introduction to Modern AI</h3>
+                    <p itemProp="description">Foundational certification in Artificial Intelligence and machine learning concepts.</p>
+                    <meta itemProp="credentialCategory" content="Professional Certification">
+                </article>
+
+                <article class="certification-card" itemScope itemType="https://schema.org/EducationalOccupationalCredential">
+                    <div class="certification-issuer">
+                        <span class="issuer-badge" itemProp="organization">Cisco</span>
+                    </div>
+                    <h3 itemProp="name">Cisco Certified Cybersecurity</h3>
+                    <p itemProp="description">Advanced certification in cybersecurity practices, threat detection, and system hardening.</p>
+                    <meta itemProp="credentialCategory" content="Professional Certification">
+                </article>
+
+                <article class="certification-card" itemScope itemType="https://schema.org/EducationalOccupationalCredential">
+                    <div class="certification-issuer">
+                        <span class="issuer-badge" itemProp="organization">Cisco</span>
+                    </div>
+                    <h3 itemProp="name">Cisco Certified Introduction to Networking</h3>
+                    <p itemProp="description">Foundational certification in networking protocols, infrastructure, and communication systems.</p>
+                    <meta itemProp="credentialCategory" content="Professional Certification">
+                </article>
+
+                <article class="certification-card" itemScope itemType="https://schema.org/EducationalOccupationalCredential">
+                    <div class="certification-issuer">
+                        <span class="issuer-badge" itemProp="organization">Cisco</span>
+                    </div>
+                    <h3 itemProp="name">Cisco Certified Introduction to IoT</h3>
+                    <p itemProp="description">Foundational certification in Internet of Things technologies, sensors, and connected systems.</p>
+                    <meta itemProp="credentialCategory" content="Professional Certification">
+                </article>
+
+                <article class="certification-card" itemScope itemType="https://schema.org/Award">
+                    <div class="certification-issuer">
+                        <span class="issuer-badge issuer-badge-featured" itemProp="organization">Huawei</span>
+                    </div>
+                    <h3 itemProp="name">Huawei Hackathon Certificate</h3>
+                    <p itemProp="description">Award recognizing participation and achievement in Huawei technical hackathon competition.</p>
+                    <meta itemProp="awardCategory" content="Hackathon Award">
                 </article>
             </div>
         </div>
@@ -182,6 +299,13 @@
                 </article>
 
                 <article class="home-project-card">
+                    <span class="home-project-type">Portfolio</span>
+                    <h3>Software Engineering Portfolio</h3>
+                    <p>A polished portfolio site showcasing projects, skills, and engineering impact.</p>
+                    <a href="index.html" class="text-link">View Portfolio Home</a>
+                </article>
+
+                <article class="home-project-card">
                     <span class="home-project-type">Productivity</span>
                     <h3>Smart Job Tracker</h3>
                     <p>A workflow-focused app for tracking applications, progress, and next steps clearly.</p>
@@ -204,5 +328,125 @@
     </section>
 
     <script src="theme-toggle.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "John Joshua",
+      "url": "https://yourportfolio.com/",
+      "image": "https://yourportfolio.com/profile-image.jpg",
+      "description": "IT Graduate, Software Engineer, Web Developer specializing in AI, Cybersecurity, and IoT Systems",
+      "jobTitle": ["Software Engineer", "Web Developer", "Cybersecurity Enthusiast", "AI Systems Developer"],
+      "keywords": "software engineering, web development, cybersecurity, AI, IoT, secure systems, full-stack development",
+      "knowsAbout": [
+        "Web Development",
+        "Cybersecurity",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "IoT Systems",
+        "Secure Software Design",
+        "Data Management",
+        "Cloud Systems"
+      ],
+      "award": "BSc. Information Technology - Dedan Kimathi University of Technology",
+      "sameAs": [
+        "https://github.com/",
+        "https://linkedin.com/in/"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "BSc. Information Technology",
+          "issuedBy": {
+            "@type": "EducationalOrganization",
+            "name": "Dedan Kimathi University of Technology"
+          },
+          "dateIssued": "2026"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Cisco Certified IT Customer Support",
+          "credentialCategory": "Professional Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Cisco"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Cisco Certified Network Security",
+          "credentialCategory": "Professional Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Cisco"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Cisco Certified Introduction to Modern AI",
+          "credentialCategory": "Professional Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Cisco"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Cisco Certified Cybersecurity",
+          "credentialCategory": "Professional Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Cisco"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Cisco Certified Introduction to Networking",
+          "credentialCategory": "Professional Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Cisco"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Cisco Certified Introduction to IoT",
+          "credentialCategory": "Professional Certification",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Cisco"
+          }
+        },
+        {
+          "@type": "Award",
+          "name": "Huawei Hackathon Certificate",
+          "awardCategory": "Hackathon Award",
+          "awardedBy": {
+            "@type": "Organization",
+            "name": "Huawei"
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://yourportfolio.com/",
+      "name": "John Joshua - Software Engineer & Cybersecurity Developer",
+      "description": "Portfolio showcasing projects in IoT monitoring, AI security, web development, and smart systems",
+      "creator": {
+        "@type": "Person",
+        "name": "John Joshua",
+        "jobTitle": "Software Engineer"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourportfolio.com/projects.html",
+        "query-input": "required name=query"
+      }
+    }
+    </script>
 </body>
 </html>
