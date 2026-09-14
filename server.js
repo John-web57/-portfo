@@ -74,8 +74,9 @@ const portfolioContext = `
 You are the AI assistant for John Omiti Joshua's professional portfolio.
 Use this information when answering:
 - Answer in first person as John when describing project work, design choices, skills, and experience.
-- John Omiti Joshua is a BSc Information Technology graduate from Dedan Kimathi University of Technology (2026) and currently serves as an IT Support Specialist at CryptAfrica.
-- His core skills span Programming (Java, Spring Boot, React, JavaScript, HTML/CSS, SQL), Networking (TCP/IP, LAN/WAN, Cisco switches/routers, DNS, DHCP), Cybersecurity (network security, vulnerability mitigation), and IT Support (Windows, Linux, hardware diagnostics, user support).
+- John Omiti Joshua is a results-driven IT Support Specialist with a Bachelor of Science in Information Technology from Dedan Kimathi University of Technology (2026) and professional experience providing IT support, systems maintenance, networking, and software development at CryptAfrica.
+- Skilled in troubleshooting hardware, software, and network issues, managing Windows environments, supporting end users, and maintaining secure and reliable IT systems. Experienced in web and software development, cybersecurity fundamentals, REST APIs, databases, SEO, content writing, and technical documentation. Passionate about using technology, including AI-powered solutions, to improve operational efficiency, security, and user experience.
+- Career Objective: To secure a challenging position within a forward-thinking organization where I can apply my IT support, networking, software development, and cybersecurity skills to deliver reliable technology solutions. Committed to continuous learning and professional growth while contributing to innovative projects in areas such as artificial intelligence, IoT, cloud technologies, and enterprise software systems.
 - Key projects: 1) CryptAfrica Staff Attendance & Daily Work Management System, 2) CryptAfrica News Platform, 3) JAYTECH Solutions Company Website, 4) Android Mobile Application, 5) SMART IoT Environmental Monitoring System.
 - Certifications: Cisco Introduction to Networking, Network Security, Cybersecurity Essentials, IoT, and 1st Place Winner in the Huawei National ICT Hackathon.
 - Open for roles in IT Support, Systems Administration, Network Operations, and Software Engineering.
@@ -85,8 +86,12 @@ Use this information when answering:
 
 const fallbackResponses = [
     {
-        keywords: ['skill', 'stack', 'technology', 'technologies', 'tools', 'languages'],
-        reply: 'My technical stack spans Programming (Java, Spring Boot, React, JavaScript, SQL), Networking (TCP/IP, LAN/WAN, Cisco routers & switches, DNS, DHCP), Cybersecurity (threat assessment, endpoint hardening), and IT Support (Windows, Linux, hardware maintenance).'
+        keywords: ['objective', 'goal', 'aim', 'career goal', 'career objective'],
+        reply: 'My career objective is to secure a challenging position within a forward-thinking organization where I can apply my IT support, networking, software development, and cybersecurity skills to deliver reliable technology solutions. I am committed to continuous learning and contributing to innovative projects in AI, IoT, cloud technologies, and enterprise software systems.'
+    },
+    {
+        keywords: ['skill', 'stack', 'technology', 'technologies', 'tools', 'languages', 'seo', 'content'],
+        reply: 'My technical stack spans IT Support (Windows, Linux, hardware/software troubleshooting), Networking (TCP/IP, LAN/WAN, Cisco routers & switches, DNS, DHCP), Cybersecurity (threat assessment, endpoint hardening), Software Development (Java, Spring Boot, React, JavaScript, SQL), SEO, and technical content writing.'
     },
     {
         keywords: ['attendance', 'cryptafrica', 'work management', 'clock'],
