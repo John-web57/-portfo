@@ -58,7 +58,7 @@ app.get('/certifications.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'certifications.html'));
 });
 
-app.get('/case-studies.html', (req, res) => {
+app.get(['/case-studies', '/case-studies.html'], (req, res) => {
     res.sendFile(path.join(__dirname, 'case-studies.html'));
 });
 
