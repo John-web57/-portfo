@@ -1,14 +1,26 @@
-const { Sequelize } = require('sequelize');
 const path = require('path');
 
-// Create SQLite database
-const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage: path.join(__dirname, 'database.sqlite'),
-    logging: false, // Set to console.log to see SQL queries
-});
+let sequelize = null;
+let isSqliteAvailable = false;
+
+try {
+    const { Sequelize } = require('sequelize');
+    sequelize = new Sequelize({
+        dialect: 'sqlite',
+        storage: path.join(__dirname, 'database.sqlite'),
+        logging: false,
+    });
+} catch (error) {
+    console.warn('SQLite native initialization notice (using resilient fallback mode):', error.message);
+}
 
 const connectDB = async () => {
+    if (!sequelize) {
+        console.log('Database running in resilient local JSON storage mode.');
+        isSqliteAvailable = false;
+        return;
+    }
+
     try {
         await sequelize.authenticate();
         console.log('SQLite database connected successfully');
@@ -16,10 +28,11 @@ const connectDB = async () => {
         // Sync all models
         await sequelize.sync();
         console.log('Database models synchronized');
+        isSqliteAvailable = true;
     } catch (error) {
-        console.error('Database connection error:', error.message);
-        process.exit(1);
+        console.warn('SQLite connection notice (using resilient fallback mode):', error.message);
+        isSqliteAvailable = false;
     }
 };
 
-module.exports = { sequelize, connectDB };
+module.exports = { sequelize, connectDB, isSqliteAvailable: () => isSqliteAvailable };

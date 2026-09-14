@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Test Recruiter",
+    "email": "recruiter@example.com",
+    "subject": "Interview Opportunity",
+    "message": "Hello John, we were impressed by your IoT water monitoring project and would like to connect.",
+    "status": "new",
+    "createdAt": "2026-09-14T09:40:39.481Z",
+    "updatedAt": "2026-09-14T09:40:39.482Z"
+  },
+  {
+    "id": 2,
+    "name": "Test Recruiter",
+    "email": "recruiter@example.com",
+    "subject": "Interview Opportunity",
+    "message": "Hello John, we were impressed by your IoT water monitoring project and would like to connect.",
+    "status": "new",
+    "createdAt": "2026-09-14T09:41:39.412Z",
+    "updatedAt": "2026-09-14T09:41:39.414Z"
+  },
+  {
+    "id": 3,
+    "name": "Alice",
+    "email": "alice@test.com",
+    "subject": "Project inquiry",
+    "message": "Hello",
+    "status": "new",
+    "createdAt": "2026-09-14T09:42:18.991Z",
+    "updatedAt": "2026-09-14T09:42:18.991Z"
+  },
+  {
+    "id": 4,
+    "name": "Test Recruiter",
+    "email": "recruiter@example.com",
+    "subject": "Interview Opportunity",
+    "message": "Hello John, we were impressed by your IoT water monitoring project and would like to connect.",
+    "status": "new",
+    "createdAt": "2026-09-14T09:51:15.451Z",
+    "updatedAt": "2026-09-14T09:51:15.451Z"
+  },
+  {
+    "id": 5,
+    "name": "Test Recruiter",
+    "email": "recruiter@example.com",
+    "subject": "Interview Opportunity",
+    "message": "Hello John, we were impressed by your IoT water monitoring project and would like to connect.",
+    "status": "new",
+    "createdAt": "2026-09-14T09:54:04.210Z",
+    "updatedAt": "2026-09-14T09:54:04.212Z"
+  },
+  {
+    "id": 6,
+    "name": "Test Recruiter",
+    "email": "recruiter@example.com",
+    "subject": "Interview Opportunity",
+    "message": "Hello John, we were impressed by your IoT water monitoring project and would like to connect.",
+    "status": "new",
+    "createdAt": "2026-09-14T10:30:14.215Z",
+    "updatedAt": "2026-09-14T10:30:14.215Z"
+  },
+  {
+    "id": 7,
+    "name": "Test Recruiter",
+    "email": "recruiter@example.com",
+    "subject": "Interview Opportunity",
+    "message": "Hello John, we were impressed by your IoT water monitoring project and would like to connect.",
+    "status": "new",
+    "createdAt": "2026-09-14T11:27:40.273Z",
+    "updatedAt": "2026-09-14T11:27:40.274Z"
+  }
+]

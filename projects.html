@@ -19,42 +19,166 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">John Joshua</div>
+        <a href="index.html" class="logo" style="text-decoration: none;">John Joshua</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
             <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
             <li><a href="case-studies.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><button id="theme-toggle" class="btn">🌙 Dark</button></li>
+            <li><a href="ai-chat.html">AI Assistant</a></li>
+            <li><button id="theme-toggle" class="btn theme-toggle-btn">🌙 Dark</button></li>
         </ul>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger-box">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
     </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav-drawer" aria-label="Mobile Navigation">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="ai-chat.html">AI Assistant</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+            <a href="cv.pdf" class="btn" download>📄 Download CV</a>
+            <button class="btn secondary theme-toggle-btn">🌙 Dark</button>
+        </div>
+    </div>
 
     <section class="projects-page">
         <div class="projects-container">
-            <h1>My Projects</h1>
+            <p class="section-kicker" style="text-align: center;">Selected Portfolio</p>
+            <h1 style="text-align: center;">Engineered Systems & Real-World Projects</h1>
+            <p style="text-align: center; max-width: 650px; margin: 0 auto 20px; color: var(--muted);">
+                A collection of full-stack web applications, IoT monitoring devices, AI security models, and cloud solutions designed for practical utility.
+            </p>
+
+            <!-- Interactive Category Filter -->
+            <div class="project-filter-bar">
+                <button type="button" class="project-filter-pill active" data-filter="all">All Projects (8)</button>
+                <button type="button" class="project-filter-pill" data-filter="web">Enterprise & Web Apps</button>
+                <button type="button" class="project-filter-pill" data-filter="mobile">Mobile Apps</button>
+                <button type="button" class="project-filter-pill" data-filter="iot">IoT & Sensors</button>
+                <button type="button" class="project-filter-pill" data-filter="ai">AI & Cybersecurity</button>
+                <button type="button" class="project-filter-pill" data-filter="agritech">AgriTech</button>
+            </div>
 
             <div class="project-cards">
-                <div class="project-card project-card-featured">
-                    <p class="project-meta">Final Year Project</p>
-                    <h3>SMART IoT-Based Water Quality Monitoring and Flow Control System</h3>
-                    <p>Designed a real-time IoT system focused on smarter water monitoring, control, and conservation.</p>
+                <!-- Project 1: CryptAfrica Staff Attendance -->
+                <div class="project-card project-card-featured" data-category="web">
+                    <p class="project-meta">Enterprise Management System</p>
+                    <h3 class="text-success">CryptAfrica Staff Attendance & Daily Work Management System</h3>
+                    <p>Enterprise attendance, employee tracking, and daily activity management platform custom-built for CryptAfrica.</p>
                     <ul class="project-highlights">
-                        <li>Designed a real-time IoT system for monitoring water quality and flow levels.</li>
-                        <li>Integrated sensors for automated data collection and remote monitoring.</li>
-                        <li>Improved efficiency and reduced water wastage through smart automation.</li>
+                        <li>Employee clock-in and clock-out with geolocation audit tracking.</li>
+                        <li>Automated calculations of time wasted vs. time recovered during work hours.</li>
+                        <li>Leave management and supervisor approval request workflows.</li>
+                        <li>Asset and hardware inventory tracking across staff members.</li>
+                        <li>Daily work report submissions with automated managerial summaries.</li>
+                        <li>Executive administrative dashboard with real-time reporting metrics.</li>
                     </ul>
                     <div class="project-skills" aria-label="Project skills and technologies">
-                        <span class="skill-badge" itemProp="keywords">IoT</span>
-                        <span class="skill-badge" itemProp="keywords">Sensors</span>
-                        <span class="skill-badge" itemProp="keywords">Automation</span>
-                        <span class="skill-badge" itemProp="keywords">Water Monitoring</span>
+                        <span class="skill-badge" itemProp="keywords">Spring Boot</span>
+                        <span class="skill-badge" itemProp="keywords">React</span>
+                        <span class="skill-badge" itemProp="keywords">MySQL</span>
+                        <span class="skill-badge" itemProp="keywords">Java</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <p class="project-meta">Group Project</p>
+                <!-- Project 2: CryptAfrica News Platform -->
+                <div class="project-card" data-category="web">
+                    <p class="project-meta">Production Media Platform</p>
+                    <h3 class="text-info">CryptAfrica News Platform</h3>
+                    <p>Cryptocurrency and blockchain news publishing system engineered with high-speed delivery for African financial tech markets.</p>
+                    <ul class="project-highlights">
+                        <li>Comprehensive SEO optimization, OpenGraph metadata, and Google search readiness.</li>
+                        <li>Content categorization across African economic and regional corridors.</li>
+                        <li>Real-time editorial workflows and article publishing CMS.</li>
+                        <li>Mobile-responsive performance tuned for low-bandwidth networks.</li>
+                    </ul>
+                    <div class="project-skills" aria-label="Project skills and technologies">
+                        <span class="skill-badge" itemProp="keywords">Node.js</span>
+                        <span class="skill-badge" itemProp="keywords">REST APIs</span>
+                        <span class="skill-badge" itemProp="keywords">Technical SEO</span>
+                        <span class="skill-badge" itemProp="keywords">Web App</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: JAYTECH Solutions -->
+                <div class="project-card" data-category="web">
+                    <p class="project-meta">Commercial IT & Software Portal</p>
+                    <h3 class="text-discovery">JAYTECH Solutions Company Website</h3>
+                    <p>Corporate portal showcasing end-to-end IT support packages, network infrastructure, and enterprise software engineering services.</p>
+                    <ul class="project-highlights">
+                        <li>Showcases software development, IT help desk support, and network configuration offerings.</li>
+                        <li>Commercial CCTV security and surveillance installation service showcase.</li>
+                        <li>ERP and CRM implementation consulting pipelines.</li>
+                    </ul>
+                    <div class="project-skills" aria-label="Project skills and technologies">
+                        <span class="skill-badge" itemProp="keywords">HTML5 & CSS3</span>
+                        <span class="skill-badge" itemProp="keywords">JavaScript</span>
+                        <span class="skill-badge" itemProp="keywords">IT Infrastructure</span>
+                        <span class="skill-badge" itemProp="keywords">SEO</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Android Mobile App -->
+                <div class="project-card" data-category="mobile">
+                    <p class="project-meta">Native Mobile Engineering</p>
+                    <h3 class="text-warning">Android Mobile Application</h3>
+                    <p>Native Android application built in Android Studio featuring real-time cloud data synchronization and local offline storage.</p>
+                    <ul class="project-highlights">
+                        <li>Modular Android UI engineered with efficient RecyclerView list rendering.</li>
+                        <li>Cloud data synchronization with Firebase Realtime Database.</li>
+                        <li>Local SQLite caching for uninterrupted offline operations.</li>
+                    </ul>
+                    <div class="project-skills" aria-label="Project skills and technologies">
+                        <span class="skill-badge" itemProp="keywords">Java</span>
+                        <span class="skill-badge" itemProp="keywords">Android Studio</span>
+                        <span class="skill-badge" itemProp="keywords">Firebase</span>
+                        <span class="skill-badge" itemProp="keywords">SQLite</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: IoT Monitoring System -->
+                <div class="project-card" data-category="iot">
+                    <p class="project-meta">Hardware & Embedded Systems</p>
+                    <h3 class="text-teal">SMART IoT Environmental & Water Monitoring System</h3>
+                    <p>Sensor-based monitoring system using ESP32 microcontrollers with real-time browser dashboard and automated threshold alerts.</p>
+                    <ul class="project-highlights">
+                        <li>Designed a real-time IoT system for monitoring water quality and flow levels.</li>
+                        <li>Integrated temperature, humidity, and flow sensors for automated telemetry.</li>
+                        <li>Reduced water and resource wastage through smart microcontroller automation.</li>
+                    </ul>
+                    <div class="project-skills" aria-label="Project skills and technologies">
+                        <span class="skill-badge" itemProp="keywords">ESP32</span>
+                        <span class="skill-badge" itemProp="keywords">Embedded C++</span>
+                        <span class="skill-badge" itemProp="keywords">IoT Telemetry</span>
+                        <span class="skill-badge" itemProp="keywords">Sensors</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: AI for Cybersecurity -->
+                <div class="project-card" data-category="ai">
+                    <p class="project-meta">Research & Security</p>
                     <h3>AI for Cybersecurity</h3>
                     <p>Built an AI-driven cybersecurity solution for identifying threats and improving system resilience.</p>
                     <ul class="project-highlights">
@@ -70,7 +194,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <!-- Project 7: SmartSeason -->
+                <div class="project-card" data-category="agritech web">
+                    <p class="project-meta">AgriTech Web Platform</p>
                     <h3>SmartSeason Field Monitoring System</h3>
                     <p>Created a structured agricultural monitoring tool to help track farm activity and crop progress across seasons.</p>
                     <ul class="project-highlights">
@@ -89,7 +215,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <!-- Project 8: Smart Job Tracker -->
+                <div class="project-card" data-category="web">
+                    <p class="project-meta">Productivity SaaS</p>
                     <h3>Smart Job Tracker</h3>
                     <p>Developed a job application tracking system that helps users stay organized and monitor progress clearly.</p>
                     <ul class="project-highlights">
@@ -107,31 +235,107 @@
                         <a href="https://smart-job-tracker-66f5f.web.app/" target="_blank" rel="noopener noreferrer" class="btn">View Live Demo</a>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <h3>SchoolWallet</h3>
-                    <p>Created a finance management system to help schools organize payment records and improve reporting visibility.</p>
-                    <ul class="project-highlights">
-                        <li>Created a school finance management system for tracking payments and records.</li>
-                        <li>Designed modules for student fee tracking and financial reporting.</li>
-                        <li>Improved transparency and organization of school financial data.</li>
-                    </ul>
-                    <div class="project-skills" aria-label="Project skills and technologies">
-                        <span class="skill-badge" itemProp="keywords">Finance System</span>
-                        <span class="skill-badge" itemProp="keywords">Reporting</span>
-                        <span class="skill-badge" itemProp="keywords">Data Management</span>
-                        <span class="skill-badge" itemProp="keywords">School Tech</span>
-                    </div>
-                    <div class="buttons">
-                        <a href="https://schoolwallet.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn">Open School System</a>
-                    </div>
-                </div>
             </div>
 
         </div>
     </section>
 
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>John Joshua</h3>
+                    <p>IT Graduate, Software Engineer & Cybersecurity Developer building secure, practical digital systems for the real world.</p>
+                    <div class="status-pill" style="margin-bottom: 0;">
+                        <span class="status-dot"></span>
+                        <span>Available for opportunities</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About & Background</a></li>
+                        <li><a href="experience.html">Experience & Career</a></li>
+                        <li><a href="projects.html">Featured Projects</a></li>
+                        <li><a href="services.html">Services & Offerings</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Technical Blog</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Featured Work</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="projects.html">IoT Water Monitoring</a></li>
+                        <li><a href="projects.html">AI for Cybersecurity</a></li>
+                        <li><a href="projects.html">SmartSeason AgriTech</a></li>
+                        <li><a href="projects.html">Smart Job Tracker</a></li>
+                        <li><a href="projects.html">SchoolWallet System</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact & Connect</h4>
+                    <div class="footer-contact-items">
+                        <p><a href="mailto:johnomitijoshua@gmail.com">johnomitijoshua@gmail.com</a></p>
+                        <p><a href="https://wa.me/254757824227" target="_blank">+254 757 824 227</a></p>
+                        <p>Nairobi, Kenya</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 John Joshua. All rights reserved. Built with precision & security in mind.</p>
+                <div class="footer-social-strip">
+                    <a href="https://github.com/John-web57" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="GitHub">⚙</a>
+                    <a href="https://linkedin.com/in/john-omiti-joshua" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="LinkedIn">in</a>
+                    <a href="mailto:johnomitijoshua@gmail.com" class="footer-social-icon" title="Email">✉</a>
+                    <a href="https://wa.me/254757824227" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="WhatsApp">📱</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top-btn" aria-label="Back to top" title="Back to top">↑</button>
+
+    <!-- Floating AI Assistant Widget -->
+    <button id="ai-widget-launcher" aria-label="Chat with John's AI Assistant" title="Chat with John's AI">
+        <span class="ai-launcher-icon">💬</span>
+        <span class="ai-launcher-badge"></span>
+    </button>
+
+    <div id="ai-widget-window" role="dialog" aria-label="John's AI Portfolio Assistant">
+        <div class="ai-widget-header">
+            <div class="ai-widget-header-title">
+                <span style="font-size: 20px;">🤖</span>
+                <div>
+                    <h4>John's AI Assistant</h4>
+                    <span class="ai-widget-header-status" id="ai-widget-status">Ready</span>
+                </div>
+            </div>
+            <button class="ai-widget-close-btn" id="ai-widget-close" aria-label="Close assistant">✕</button>
+        </div>
+        <div class="ai-widget-messages" id="ai-widget-messages">
+            <div class="ai-bubble ai-bubble-bot">
+                <p>Hi! Ask me anything about John's featured projects, tech stacks, or engineering decisions.</p>
+            </div>
+        </div>
+        <div class="ai-widget-suggestions">
+            <button type="button" class="ai-widget-chip" data-prompt="What are your core technical skills?">Skills & Stack</button>
+            <button type="button" class="ai-widget-chip" data-prompt="Tell me about your IoT water monitoring project">IoT Project</button>
+            <button type="button" class="ai-widget-chip" data-prompt="How did you build the AI for cybersecurity system?">AI Project</button>
+            <button type="button" class="ai-widget-chip" data-prompt="Are you available for work and how can I contact you?">Hire John</button>
+        </div>
+        <form class="ai-widget-input-form" id="ai-widget-form">
+            <input type="text" id="ai-widget-input" placeholder="Ask about projects, skills, education..." autocomplete="off">
+            <button type="submit" class="ai-widget-send-btn">Send</button>
+        </form>
+    </div>
+
     <script src="theme-toggle.js"></script>
+    <script src="portfolio-ui.js"></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

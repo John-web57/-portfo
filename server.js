@@ -46,43 +46,67 @@ app.get('/projects.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'projects.html'));
 });
 
+app.get('/experience.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'experience.html'));
+});
+
+app.get('/services.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'services.html'));
+});
+
+app.get('/certifications.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'certifications.html'));
+});
+
+app.get('/case-studies.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'case-studies.html'));
+});
+
+app.get('/blog.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'blog.html'));
+});
+
 app.get('/ai-chat.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'ai-chat.html'));
 });
 
 const portfolioContext = `
-You are the AI assistant for John Joshua's portfolio.
+You are the AI assistant for John Omiti Joshua's professional portfolio.
 Use this information when answering:
-- Answer in first person as John when describing the project work, design choices, skills, and experience.
-- John Joshua is an IT graduate and web developer with strong interest in AI, cybersecurity, and practical digital products.
-- The portfolio highlights web development, AI/ML, cybersecurity, and IoT.
-- He studied BSc. Information Technology at Dedan Kimathi University of Technology from 2022 to 2026 and has Dean's List recognition.
-- He is open to internships, freelance projects, and collaboration.
-- Visitors can explore Projects, Case Studies, Blog, About, and Contact pages to learn more or reach out.
-- Keep responses concise, helpful, professional, and portfolio-focused.
-- If a question asks for information not available in the portfolio, say so clearly and invite the visitor to contact John directly.
+- Answer in first person as John when describing project work, design choices, skills, and experience.
+- John Omiti Joshua is a BSc Information Technology graduate from Dedan Kimathi University of Technology (2026) and currently serves as an IT Support Specialist at CryptAfrica.
+- His core skills span Programming (Java, Spring Boot, React, JavaScript, HTML/CSS, SQL), Networking (TCP/IP, LAN/WAN, Cisco switches/routers, DNS, DHCP), Cybersecurity (network security, vulnerability mitigation), and IT Support (Windows, Linux, hardware diagnostics, user support).
+- Key projects: 1) CryptAfrica Staff Attendance & Daily Work Management System, 2) CryptAfrica News Platform, 3) JAYTECH Solutions Company Website, 4) Android Mobile Application, 5) SMART IoT Environmental Monitoring System.
+- Certifications: Cisco Introduction to Networking, Network Security, Cybersecurity Essentials, IoT, and 1st Place Winner in the Huawei National ICT Hackathon.
+- Open for roles in IT Support, Systems Administration, Network Operations, and Software Engineering.
+- Contact: johnomitijoshua@gmail.com, +254 757 824 227, Nairobi, Kenya.
+- Keep responses concise, professional, and portfolio-focused.
 `.trim();
 
 const fallbackResponses = [
     {
-        keywords: ['skill', 'stack', 'technology', 'technologies', 'tools'],
-        reply: 'I work across web development, AI/ML, cybersecurity, and IoT. My portfolio especially emphasizes practical web solutions, intelligent systems, and secure digital products.'
+        keywords: ['skill', 'stack', 'technology', 'technologies', 'tools', 'languages'],
+        reply: 'My technical stack spans Programming (Java, Spring Boot, React, JavaScript, SQL), Networking (TCP/IP, LAN/WAN, Cisco routers & switches, DNS, DHCP), Cybersecurity (threat assessment, endpoint hardening), and IT Support (Windows, Linux, hardware maintenance).'
     },
     {
-        keywords: ['education', 'study', 'university', 'degree'],
-        reply: 'I studied BSc. Information Technology at Dedan Kimathi University of Technology from 2022 to 2026, with Dean\'s List recognition highlighted in my portfolio.'
+        keywords: ['attendance', 'cryptafrica', 'work management', 'clock'],
+        reply: 'I built the CryptAfrica Staff Attendance & Daily Work Management System with Spring Boot, React, MySQL, and Java. It manages employee clock-in/out, time wasted vs. recovered calculations, leave requests, asset allocation, and daily work logs.'
+    },
+    {
+        keywords: ['education', 'study', 'university', 'degree', 'kimathi'],
+        reply: 'I graduated with a Bachelor of Science in Information Technology from Dedan Kimathi University of Technology (2026) with coursework spanning Software Engineering, Networking, Cybersecurity, and Database Systems.'
     },
     {
         keywords: ['project', 'projects', 'build', 'built'],
-        reply: 'I build practical web applications and I am especially interested in intelligent systems, cybersecurity-focused solutions, and IoT projects. The Projects and Case Studies pages are the best place to explore specific work.'
+        reply: 'My primary projects are: 1) CryptAfrica Staff Attendance & Work Management System, 2) CryptAfrica News Platform, 3) JAYTECH Solutions Company Website, 4) Android Mobile Application, and 5) SMART IoT Environmental & Water Monitoring System.'
     },
     {
-        keywords: ['ai', 'machine learning', 'prompt', 'llm'],
-        reply: 'AI is one of my core focus areas. I am especially interested in intelligent systems, prompt engineering, and practical AI-driven solutions.'
+        keywords: ['certifications', 'cisco', 'huawei', 'award', 'hackathon'],
+        reply: 'I hold 4 Cisco credentials (Networking, Network Security, Cybersecurity Essentials, IoT) and won First Place in the Huawei National ICT Hackathon for Best Android Application.'
     },
     {
-        keywords: ['hire', 'available', 'freelance', 'internship', 'collaborate', 'contact'],
-        reply: 'I am open to internships, freelance work, and collaborations. The fastest next step is through the Contact page if you want to discuss a role or project.'
+        keywords: ['hire', 'available', 'freelance', 'internship', 'collaborate', 'contact', 'email'],
+        reply: 'I am actively open to IT Support, Systems Administration, and Software Developer positions. You can reach me directly at johnomitijoshua@gmail.com, +254 757 824 227, or via the Contact form.'
     }
 ];
 
@@ -96,7 +120,7 @@ function buildFallbackReply(message) {
         return matchedResponse.reply;
     }
 
-    return 'I am an IT graduate and developer focused on web development, AI, cybersecurity, and practical problem-solving. If you want details about a project, skill set, or collaboration opportunity, ask that directly or use the Contact page.';
+    return 'I am John Omiti Joshua, an IT Support Specialist at CryptAfrica and Software Developer. Feel free to ask about my projects like the CryptAfrica Attendance System, my Cisco & Huawei certifications, or my technical skills!';
 }
 
 async function getOpenAIReply(message) {
@@ -185,7 +209,10 @@ const transporter = nodemailer.createTransport({
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
-    }
+    },
+    connectionTimeout: 5000,
+    greetingTimeout: 5000,
+    socketTimeout: 5000
 });
 
 // Contact form endpoint
@@ -288,15 +315,24 @@ app.post('/api/contact', async (req, res) => {
                 `
             };
 
-            // Send both emails
-            await transporter.sendMail(mailOptions);
-            await transporter.sendMail(confirmationEmail);
-            console.log('✅ Emails sent via Gmail');
+            // Send both emails if configured
+            if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+                Promise.all([
+                    transporter.sendMail(mailOptions),
+                    transporter.sendMail(confirmationEmail)
+                ]).then(() => {
+                    console.log('✅ Emails sent via Gmail');
+                }).catch((mailErr) => {
+                    console.warn('⚠️ Email notification notice (message saved to database):', mailErr.message);
+                });
+            } else {
+                console.log('ℹ️ Email credentials not configured, contact message saved to database');
+            }
         }
 
         res.status(200).json({
             success: true,
-            message: 'Email sent successfully!'
+            message: 'Message received and saved successfully!'
         });
 
     } catch (error) {

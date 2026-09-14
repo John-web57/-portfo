@@ -11,17 +11,49 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">John Joshua</div>
+        <a href="index.html" class="logo" style="text-decoration: none;">John Joshua</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
             <li><a href="case-studies.html">Case Studies</a></li>
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><button id="theme-toggle" class="btn">🌙 Dark</button></li>
+            <li><a href="ai-chat.html">AI Assistant</a></li>
+            <li><button id="theme-toggle" class="btn theme-toggle-btn">🌙 Dark</button></li>
         </ul>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger-box">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
     </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav-drawer" aria-label="Mobile Navigation">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="ai-chat.html">AI Assistant</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+            <a href="cv.pdf" class="btn" download>📄 Download CV</a>
+            <button class="btn secondary theme-toggle-btn">🌙 Dark</button>
+        </div>
+    </div>
 
     <section class="blog-page">
         <div class="blog-page-container">
@@ -134,7 +166,102 @@
         </div>
     </section>
 
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>John Joshua</h3>
+                    <p>IT Graduate, Software Engineer & Cybersecurity Developer building secure, practical digital systems for the real world.</p>
+                    <div class="status-pill" style="margin-bottom: 0;">
+                        <span class="status-dot"></span>
+                        <span>Available for opportunities</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About & Background</a></li>
+                        <li><a href="experience.html">Experience & Career</a></li>
+                        <li><a href="projects.html">Featured Projects</a></li>
+                        <li><a href="services.html">Services & Offerings</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Technical Blog</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Featured Work</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="projects.html">IoT Water Monitoring</a></li>
+                        <li><a href="projects.html">AI for Cybersecurity</a></li>
+                        <li><a href="projects.html">SmartSeason AgriTech</a></li>
+                        <li><a href="projects.html">Smart Job Tracker</a></li>
+                        <li><a href="projects.html">SchoolWallet System</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact & Connect</h4>
+                    <div class="footer-contact-items">
+                        <p><a href="mailto:johnomitijoshua@gmail.com">johnomitijoshua@gmail.com</a></p>
+                        <p><a href="https://wa.me/254757824227" target="_blank">+254 757 824 227</a></p>
+                        <p>Nairobi, Kenya</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 John Joshua. All rights reserved. Built with precision & security in mind.</p>
+                <div class="footer-social-strip">
+                    <a href="https://github.com/John-web57" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="GitHub">⚙</a>
+                    <a href="https://linkedin.com/in/john-omiti-joshua" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="LinkedIn">in</a>
+                    <a href="mailto:johnomitijoshua@gmail.com" class="footer-social-icon" title="Email">✉</a>
+                    <a href="https://wa.me/254757824227" target="_blank" rel="noopener noreferrer" class="footer-social-icon" title="WhatsApp">📱</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top-btn" aria-label="Back to top" title="Back to top">↑</button>
+
+    <!-- Floating AI Assistant Widget -->
+    <button id="ai-widget-launcher" aria-label="Chat with John's AI Assistant" title="Chat with John's AI">
+        <span class="ai-launcher-icon">💬</span>
+        <span class="ai-launcher-badge"></span>
+    </button>
+
+    <div id="ai-widget-window" role="dialog" aria-label="John's AI Portfolio Assistant">
+        <div class="ai-widget-header">
+            <div class="ai-widget-header-title">
+                <span style="font-size: 20px;">🤖</span>
+                <div>
+                    <h4>John's AI Assistant</h4>
+                    <span class="ai-widget-header-status" id="ai-widget-status">Ready</span>
+                </div>
+            </div>
+            <button class="ai-widget-close-btn" id="ai-widget-close" aria-label="Close assistant">✕</button>
+        </div>
+        <div class="ai-widget-messages" id="ai-widget-messages">
+            <div class="ai-bubble ai-bubble-bot">
+                <p>Hi! Ask me about John's articles on secure Node.js APIs, prompt engineering, or deployment workflows.</p>
+            </div>
+        </div>
+        <div class="ai-widget-suggestions">
+            <button type="button" class="ai-widget-chip" data-prompt="Summarize the Secure Node.js API article">Secure APIs</button>
+            <button type="button" class="ai-widget-chip" data-prompt="What tips does John have for Prompt Engineering?">Prompt Engineering</button>
+            <button type="button" class="ai-widget-chip" data-prompt="How does John deploy Express on Render?">Deploying on Render</button>
+            <button type="button" class="ai-widget-chip" data-prompt="Are you available for work and how can I contact you?">Hire John</button>
+        </div>
+        <form class="ai-widget-input-form" id="ai-widget-form">
+            <input type="text" id="ai-widget-input" placeholder="Ask about articles, engineering insights..." autocomplete="off">
+            <button type="submit" class="ai-widget-send-btn">Send</button>
+        </form>
+    </div>
+
     <script src="theme-toggle.js"></script>
     <script src="blog.js"></script>
+    <script src="portfolio-ui.js"></script>
 </body>
 </html>
