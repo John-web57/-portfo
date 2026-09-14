@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <title>John Omiti Joshua | IT Support Specialist & Software Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="John Omiti Joshua - BSc Information Technology Graduate specializing in IT Support, Software Development, Networking, Cybersecurity, and Technical Troubleshooting.">
+    <meta name="description" content="Official Portfolio of John Omiti Joshua - BSc IT Graduate specializing in IT Support, Software Development, Networking, Cybersecurity, and Technical Troubleshooting.">
     <meta name="keywords" content="John Omiti Joshua, IT Support Specialist, Software Developer, Networking, Cybersecurity, Dedan Kimathi University of Technology, CryptAfrica, Java, React, Spring Boot">
     <meta name="author" content="John Omiti Joshua">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="John Omiti Joshua | IT Support Specialist & Software Developer">
-    <meta property="og:description" content="Official Portfolio of John Omiti Joshua - BSc IT Graduate, IT Support Specialist, and Software Developer">
+    <meta property="og:description" content="BSc Information Technology graduate focused on IT support, software development, networking, cybersecurity, and practical technology solutions.">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="John Omiti Joshua | IT & Software Engineering Portfolio">
-    <meta name="twitter:description" content="Building secure, reliable, and user-friendly technology solutions">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
@@ -23,19 +20,19 @@
     <!-- Universal Navigation Bar -->
     <nav class="navbar">
         <a href="index.html" class="logo" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
-            <span class="name-title-green" style="font-weight: 800;">John</span> Joshua
+            <span class="name-title-green" style="font-weight: 800; font-size: 1.5rem; margin: 0;">John</span>
+            <span style="font-size: 1.5rem; font-weight: 700;">Joshua</span>
         </a>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="projects.html">Projects</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
             <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="ai-chat.html">AI Assistant</a></li>
+            <li><a href="cv.pdf" class="btn-cv-nav" download>📄 Download CV</a></li>
             <li><button id="theme-toggle" class="btn theme-toggle-btn">☀️ Light</button></li>
         </ul>
         <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -53,14 +50,12 @@
         <ul class="mobile-nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="projects.html">Projects</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
             <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="ai-chat.html">AI Assistant</a></li>
         </ul>
         <div class="mobile-drawer-footer">
             <a href="cv.pdf" class="btn" download>📄 Download CV</a>
@@ -68,56 +63,45 @@
         </div>
     </div>
 
-    <!-- Main Container wrapping the 15-Section Portfolio -->
-    <div class="portfolio-container" style="max-width: 1180px; margin: 0 auto; padding: 110px 24px 60px;">
+    <!-- Main Container -->
+    <div class="portfolio-container" style="max-width: 1180px; margin: 0 auto; padding: 100px 24px 60px;">
 
-        <!-- ================= 1. HERO SECTION ================= -->
-        <section id="hero" style="padding: 40px 0 20px;">
+        <!-- ================= 1. HERO ================= -->
+        <section id="hero" style="padding: 30px 0 20px;">
             <div style="display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap-reverse;">
                 <div style="flex: 1; min-width: 320px;">
-                    <h1 class="name-title-green">John Omiti Joshua</h1>
-
-                    <!-- Role Pills -->
-                    <div class="badge-pill-container">
-                        <span class="badge-pill badge-pill-success">
-                            <span style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e; display: inline-block;"></span>
+                    <!-- Status Badge -->
+                    <div style="margin-bottom: 1rem;">
+                        <span class="badge-pill badge-pill-success" style="display: inline-flex; align-items: center; gap: 7px; font-size: 0.85rem; padding: 6px 14px;">
+                            <span style="width: 8px; height: 8px; border-radius: 50%; background: #00f2fe; box-shadow: 0 0 8px #00f2fe; display: inline-block;"></span>
                             Open to Work
                         </span>
-                        <span class="badge-pill badge-pill-info">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16v10H4zM2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6v2h3a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V4z"/></svg>
-                            IT Support Specialist
-                        </span>
-                        <span class="badge-pill badge-pill-discovery">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-                            Software Developer
-                        </span>
                     </div>
 
-                    <!-- Professional Summary -->
-                    <p style="font-size: 1.15rem; line-height: 1.7; color: var(--text); max-width: 860px; margin: 0 0 1rem;">
-                        BSc Information Technology Graduate specializing in IT Support, Software Development, Networking, Cybersecurity, and Technical Troubleshooting. Passionate about building secure, reliable, and user-friendly technology solutions.
+                    <h1 class="name-title-green" style="font-size: clamp(2.4rem, 5vw, 3.6rem); margin: 0 0 0.5rem; text-transform: uppercase;">
+                        John Omiti Joshua
+                    </h1>
+
+                    <h2 style="font-size: 1.35rem; color: var(--heading); font-weight: 700; margin: 0 0 0.35rem;">
+                        IT Support Specialist <span style="color: var(--accent);">|</span> Software Developer
+                    </h2>
+
+                    <p style="font-size: 1.05rem; color: var(--color-info); font-weight: 600; margin: 0 0 1.25rem;">
+                        Networking <span style="color: var(--muted);">|</span> Cybersecurity <span style="color: var(--muted);">|</span> Technical Troubleshooting
                     </p>
 
-                    <!-- Contact Meta Info Row -->
-                    <div class="meta-info-row">
-                        <div class="meta-info-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M5 4a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H5zm-1 3.329V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7.329L13.976 12.6a3 3 0 0 1-3.952 0L4 7.33zM18.481 6H5.52l5.822 5.095a1 1 0 0 0 1.318 0L18.48 6z" clip-rule="evenodd"/></svg>
-                            <a href="mailto:johnomitijoshua@gmail.com" style="color: inherit; text-decoration: none;">johnomitijoshua@gmail.com</a>
-                        </div>
-                        <div class="meta-info-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-                            <span>Nairobi, Kenya</span>
-                        </div>
-                    </div>
+                    <p style="font-size: 1.12rem; line-height: 1.7; color: var(--text); max-width: 760px; margin: 0 0 1.75rem;">
+                        BSc Information Technology graduate focused on IT support, software development, networking, cybersecurity, and practical technology solutions.
+                    </p>
 
                     <!-- Hero Action Buttons -->
                     <div class="btn-pill-row">
-                        <a href="cv.pdf" class="btn-pill btn-pill-emerald" download>
+                        <a href="#projects" class="btn-pill btn-pill-emerald" style="font-weight: 700;">
+                            View My Projects
+                        </a>
+                        <a href="cv.pdf" class="btn-pill btn-pill-outline" download>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
                             Download CV
-                        </a>
-                        <a href="#projects" class="btn-pill btn-pill-outline">
-                            View Projects
                         </a>
                         <a href="#contact" class="btn-pill btn-pill-outline">
                             Contact Me
@@ -125,7 +109,7 @@
                     </div>
                 </div>
 
-                <!-- Professional Portrait Image -->
+                <!-- Professional Photo on Right -->
                 <div style="flex-shrink: 0; text-align: center; margin: 0 auto;">
                     <div style="position: relative; display: inline-block;">
                         <img src="john-photo.jpg" alt="John Omiti Joshua - IT Support Specialist & Software Developer" style="width: 270px; height: 325px; object-fit: cover; object-position: center top; border-radius: 22px; border: 2px solid rgba(56, 189, 248, 0.5); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 32px rgba(14, 165, 233, 0.3); display: block;">
@@ -141,289 +125,357 @@
         <div class="section-divider"></div>
 
         <!-- ================= 2. ABOUT ME ================= -->
-        <section id="about-me" style="padding: 20px 0;">
+        <section id="about" style="padding: 20px 0;">
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 02</span>
+                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">About Me</span>
             </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 1rem;">About Me</h2>
-            
-            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text); margin-bottom: 1.5rem; max-width: 920px;">
-                I am a BSc Information Technology graduate and Information Technology Support Specialist with experience in software development, technical support, networking, and cybersecurity. I enjoy building practical technology solutions that solve real-world problems and improve how organizations work.
+            <h2 style="font-size: 2.1rem; margin: 0 0 1rem;">Solving Real Business & Operational Challenges</h2>
+
+            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text); max-width: 960px; margin: 0 0 1.5rem;">
+                I am a BSc Information Technology graduate and Information Technology Support Specialist with practical experience in IT support, software development, networking, cybersecurity, and technical troubleshooting. I enjoy building reliable technology solutions that solve real business and operational challenges.
             </p>
 
-            <ul style="color: var(--text); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; padding-left: 20px;">
-                <li><strong>Who I Am:</strong> A proactive IT graduate, systems builder, and software engineer who solves operational problems through robust code and sound infrastructure.</li>
-                <li><strong>My Education:</strong> Bachelor of Science in Information Technology graduate from <strong>Dedan Kimathi University of Technology (DeKUT)</strong>.</li>
-                <li><strong>Current Role:</strong> Serving as an <strong>IT Support Specialist at CryptAfrica</strong>, overseeing user support, network stability, and staff systems.</li>
-                <li><strong>Career Interests:</strong> Enterprise IT infrastructure, cybersecurity defense, high-performance web systems, cloud computing, and IT project management.</li>
-                <li><strong>Technologies I Enjoy:</strong> Java, Spring Boot, React, MySQL, Cisco Packet Tracer, Linux systems administration, and IoT monitoring hardware.</li>
-            </ul>
-
-            <blockquote class="quote-card">
-                “I am a Bachelor of Science in Information Technology graduate from Dedan Kimathi University of Technology and currently work as an IT Support Specialist at CryptAfrica. I have experience in IT support, software development, networking, cybersecurity, and SEO. I enjoy developing systems that improve business operations and solve real-world challenges.”
-            </blockquote>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- ================= 3. SKILLS SECTION ================= -->
-        <section id="skills" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 03</span>
-            </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">Technical & Domain Skills</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.75rem;">Grouped professional competencies across software, networks, security, and hardware:</p>
-
-            <div class="skills-grid-2x2">
-                <!-- Programming Card -->
-                <div class="skill-cat-card">
-                    <div class="skill-cat-header">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="text-success"><path fill-rule="evenodd" d="M14.447 7.106a1 1 0 0 1 .447 1.341l-4 8a1 1 0 1 1-1.788-.894l4-8a1 1 0 0 1 1.341-.447ZM6.6 7.2a1 1 0 0 1 .2 1.4L4.25 12l2.55 3.4a1 1 0 0 1-1.6 1.2l-3-4a1 1 0 0 1 0-1.2l3-4a1 1 0 0 1 1.4-.2Zm10.8 0a1 1 0 0 1 1.4.2l3 4a1 1 0 0 1 0 1.2l-3 4a1 1 0 0 1-1.6-1.2l2.55-3.4-2.55-3.4a1 1 0 0 1 .2-1.4Z" clip-rule="evenodd"/></svg>
-                        <h3 class="skill-cat-title text-success">Programming</h3>
-                    </div>
-                    <p class="skill-cat-desc">Java, JavaScript, HTML, CSS, SQL, React, Spring Boot</p>
+            <!-- 4 Small Overview Cards -->
+            <div class="about-cards-row">
+                <div class="skill-cat-card" style="padding: 1.25rem;">
+                    <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🎓</div>
+                    <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">Education</span>
+                    <h3 style="font-size: 1.05rem; margin: 4px 0 2px; color: var(--heading);">BSc Information Technology</h3>
+                    <p style="margin: 0; font-size: 0.88rem; color: var(--muted);">Dedan Kimathi University of Technology (2026)</p>
                 </div>
 
-                <!-- Networking Card -->
-                <div class="skill-cat-card">
-                    <div class="skill-cat-header">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="text-info"><path d="M12 2a3.5 3.5 0 0 0-3.5 3.5c0 1.4.8 2.6 2 3.1v2.1H7a3 3 0 0 0-3 3v1.1a3.5 3.5 0 1 0 2 0V13.7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v1.1a3.5 3.5 0 1 0 2 0V13.7a3 3 0 0 0-3-3h-3.5V8.6a3.5 3.5 0 0 0 2-3.1A3.5 3.5 0 0 0 12 2z"/></svg>
-                        <h3 class="skill-cat-title text-info">Networking</h3>
-                    </div>
-                    <p class="skill-cat-desc">TCP/IP, LAN/WAN, Routers, Switches, DNS, DHCP</p>
+                <div class="skill-cat-card" style="padding: 1.25rem;">
+                    <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">💼</div>
+                    <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">Current Role</span>
+                    <h3 style="font-size: 1.05rem; margin: 4px 0 2px; color: var(--heading);">IT Support Specialist</h3>
+                    <p style="margin: 0; font-size: 0.88rem; color: var(--muted);">CryptAfrica (June 2026 – Present)</p>
                 </div>
 
-                <!-- Cybersecurity Card -->
-                <div class="skill-cat-card">
-                    <div class="skill-cat-header">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="text-discovery"><path fill-rule="evenodd" d="M12 1.75a3 3 0 0 0-2.4 1.2L3.6 7.3A3 3 0 0 0 3 9.1v3.9a9 9 0 0 0 18 0V9.1a3 3 0 0 0-.6-1.8l-6-4.35a3 3 0 0 0-2.4-1.2zm3.3 8.3a1 1 0 1 0-1.7-1.1L11.2 12.8l-1.9-1.9a1 1 0 0 0-1.4 1.4l2.6 2.6a1 1 0 0 0 1.5-.1l3.3-4.8z" clip-rule="evenodd"/></svg>
-                        <h3 class="skill-cat-title text-discovery">Cybersecurity</h3>
-                    </div>
-                    <p class="skill-cat-desc">Network Security, Vulnerability Assessment, Security Best Practices</p>
+                <div class="skill-cat-card" style="padding: 1.25rem;">
+                    <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">💻</div>
+                    <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">Core Focus</span>
+                    <h3 style="font-size: 1.05rem; margin: 4px 0 2px; color: var(--heading);">Technical Systems</h3>
+                    <p style="margin: 0; font-size: 0.88rem; color: var(--muted);">IT Support • Software • Networks • Security</p>
                 </div>
 
-                <!-- IT Support Card -->
-                <div class="skill-cat-card">
-                    <div class="skill-cat-header">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="text-warning"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.7 4.7C.6 7.1 1 10.1 3 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.4-.4.4-1.1 0-1.4z"/></svg>
-                        <h3 class="skill-cat-title text-warning">IT Support</h3>
-                    </div>
-                    <p class="skill-cat-desc">Windows, Linux, Hardware Troubleshooting, Printers, Microsoft Office</p>
-                </div>
-            </div>
-
-            <!-- Additional Core Tools & Technologies -->
-            <div style="margin-top: 1.5rem;">
-                <p style="font-weight: 600; color: var(--text); margin-bottom: 0.65rem;">Also specialized in:</p>
-                <div class="additional-skills-wrap">
-                    <span class="badge-pill badge-pill-success">Git & GitHub</span>
-                    <span class="badge-pill badge-pill-info">MySQL</span>
-                    <span class="badge-pill badge-pill-discovery">Firebase</span>
-                    <span class="badge-pill badge-pill-warning">Android Studio</span>
-                    <span class="badge-pill badge-pill-teal">REST APIs</span>
-                    <span class="badge-pill badge-pill-success">SEO & Performance</span>
+                <div class="skill-cat-card" style="padding: 1.25rem;">
+                    <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">📍</div>
+                    <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600;">Location</span>
+                    <h3 style="font-size: 1.05rem; margin: 4px 0 2px; color: var(--heading);">Nairobi, Kenya</h3>
+                    <p style="margin: 0; font-size: 0.88rem; color: var(--muted);">Open to on-site & remote engagements</p>
                 </div>
             </div>
         </section>
 
         <div class="section-divider"></div>
 
-        <!-- ================= 4. FEATURED PROJECTS ================= -->
+        <!-- ================= 3. CORE SERVICES (8 Services in 4x2 Clean Grid) ================= -->
+        <section id="services" style="padding: 20px 0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+                <div>
+                    <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Services</span>
+                    <h2 style="font-size: 2.1rem; margin: 4px 0 0;">Core Technology Services</h2>
+                </div>
+                <a href="services.html" class="service-action-link" style="color: var(--color-info); font-weight: 600; text-decoration: none;">Explore Detailed Deliverables →</a>
+            </div>
+            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem;">Practical technology solutions built around real business and organizational needs.</p>
+
+            <div class="services-grid-4x2">
+                <!-- 1. IT Support -->
+                <div class="compact-service-card">
+                    <div>
+                        <div style="font-size: 1.75rem;">🛠️</div>
+                        <h3>1. IT Support & Troubleshooting</h3>
+                        <ul>
+                            <li>Windows & Linux support</li>
+                            <li>Hardware/software troubleshooting</li>
+                            <li>Printer & peripheral setup</li>
+                            <li>System maintenance & repair</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="service-action-link">Get IT Support →</a>
+                </div>
+
+                <!-- 2. Software Development -->
+                <div class="compact-service-card">
+                    <div>
+                        <div style="font-size: 1.75rem;">💻</div>
+                        <h3>2. Software Development</h3>
+                        <ul>
+                            <li>Custom business software</li>
+                            <li>REST API development</li>
+                            <li>Database-driven applications</li>
+                            <li>System integrations & testing</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="service-action-link">Request Software →</a>
+                </div>
+
+                <!-- 3. Web Development -->
+                <div class="compact-service-card">
+                    <div>
+                        <div style="font-size: 1.75rem;">🌐</div>
+                        <h3>3. Web Development</h3>
+                        <ul>
+                            <li>Responsive company websites</li>
+                            <li>Modern frontend development</li>
+                            <li>Admin dashboards & portals</li>
+                            <li>Website maintenance & updates</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="service-action-link">Build a Website →</a>
+                </div>
+
+                <!-- 4. Networking & Systems -->
+                <div class="compact-service-card">
+                    <div>
+                        <div style="font-size: 1.75rem;">🔌</div>
+                        <h3>4. Networking & Systems</h3>
+                        <ul>
+                            <li>LAN/WAN setup & config</li>
+                            <li>Router & switch management</li>
+                            <li>Network troubleshooting</li>
+                            <li>Infrastructure maintenance</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="service-action-link">Network Services →</a>
+                </div>
+
+                <!-- 5. Cybersecurity -->
+                <div class="compact-service-card">
+                    <div>
+                        <div style="font-size: 1.75rem;">🛡️</div>
+                        <h3>5. Cybersecurity</h3>
+                        <ul>
+                            <li>Vulnerability assessment</li>
+                            <li>Endpoint protection & hardening</li>
+                            <li>Security best practices</li>
+                            <li>User awareness & audits</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="service-action-link">Security Services →</a>
+                </div>
+
+                <!-- 6. SEO & Optimization -->
+                <div class="compact-service-card">
+                    <div>
+                        <div style="font-size: 1.75rem;">📈</div>
+                        <h3>6. SEO & Optimization</h3>
+                        <ul>
+                            <li>On-page SEO optimization</li>
+                            <li>Core Web Vitals tuning</li>
+                            <li>Mobile UX responsiveness</li>
+                            <li>Technical SEO auditing</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="service-action-link">Optimize Website →</a>
+                </div>
+
+                <!-- 7. Mobile Development -->
+                <div class="compact-service-card">
+                    <div>
+                        <div style="font-size: 1.75rem;">📱</div>
+                        <h3>7. Mobile Development</h3>
+                        <ul>
+                            <li>Android native applications</li>
+                            <li>Mobile UI/UX development</li>
+                            <li>API integration & testing</li>
+                            <li>Bug fixing & app updates</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="service-action-link">Build Mobile App →</a>
+                </div>
+
+                <!-- 8. IT Systems & Solutions -->
+                <div class="compact-service-card">
+                    <div>
+                        <div style="font-size: 1.75rem;">⚙️</div>
+                        <h3>8. IT Systems & Solutions</h3>
+                        <ul>
+                            <li>Digital workflow automation</li>
+                            <li>Staff & attendance systems</li>
+                            <li>Asset tracking & reporting</li>
+                            <li>Technical advisory consultancy</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="service-action-link">Consult on Solutions →</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ================= 4. FEATURED PROJECTS ⭐ ================= -->
         <section id="projects" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 04</span>
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+                <div>
+                    <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Featured Projects ⭐</span>
+                    <h2 style="font-size: 2.1rem; margin: 4px 0 0;">Real-World Systems Built & Deployed</h2>
+                </div>
+                <a href="projects.html" class="service-action-link" style="color: var(--color-info); font-weight: 600; text-decoration: none;">View All Projects (8) →</a>
             </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">Featured Projects</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem;">Real enterprise software, web platforms, mobile apps, and IoT systems built and maintained:</p>
+            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem;">Real enterprise software, web platforms, mobile apps, and IoT telemetry systems:</p>
 
-            <!-- Project 1 -->
-            <article class="featured-project-card">
-                <h3>
-                    <span class="proj-num" style="background: #16a34a;">1</span>
-                    <span class="text-success">CryptAfrica Staff Attendance & Daily Work Management System</span>
+            <!-- ⭐ FEATURED PROJECT: CryptAfrica Attendance System -->
+            <div class="featured-project-star">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 0.75rem;">
+                    <span class="badge-pill badge-pill-success" style="font-size: 0.82rem; padding: 4px 12px; font-weight: 700;">
+                        ⭐ FEATURED ENTERPRISE SYSTEM
+                    </span>
+                    <span style="font-size: 0.85rem; color: var(--muted);">Internal Production System</span>
+                </div>
+
+                <h3 style="font-size: 1.65rem; color: var(--heading); margin: 0 0 0.75rem; font-weight: 700;">
+                    CryptAfrica Staff Attendance & Daily Work Management System
                 </h3>
-                <p class="project-summary">Enterprise attendance and employee management system built for CryptAfrica to streamline daily accountability and resource oversight.</p>
-                
-                <div class="project-features-title">Core Capabilities & Modules</div>
-                <ul class="features-checklist">
-                    <li>Employee clock-in and clock-out with geolocation verification</li>
-                    <li>Time wasted and time recovered automated calculations</li>
-                    <li>Leave management and supervisor approval pipelines</li>
-                    <li>Company asset and hardware allocation tracking</li>
-                    <li>Daily work progress logging and managerial reporting</li>
-                    <li>Internal company announcements and meeting schedules</li>
-                    <li>Comprehensive executive administrative dashboard with data exports</li>
-                </ul>
 
-                <div style="margin-top: 1.25rem;">
-                    <span style="font-weight: 600; font-size: 0.85rem; color: var(--muted); margin-right: 0.75rem;">TECHNOLOGIES:</span>
-                    <div class="badge-pill-container" style="display: inline-flex; margin: 0;">
-                        <span class="badge-pill badge-pill-success">Spring Boot</span>
-                        <span class="badge-pill badge-pill-info">React</span>
-                        <span class="badge-pill badge-pill-discovery">MySQL</span>
-                        <span class="badge-pill badge-pill-teal">Java</span>
+                <p style="font-size: 1.1rem; line-height: 1.75; color: var(--text); max-width: 920px; margin: 0 0 1.25rem;">
+                    An internal employee attendance and daily work management system designed to help manage attendance, employee activities, assets, leave, meetings and reporting.
+                </p>
+
+                <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                    <span style="font-weight: 700; font-size: 0.85rem; color: var(--muted); margin-right: 0.5rem;">BUILT WITH:</span>
+                    <span class="badge-pill badge-pill-info">Spring Boot</span>
+                    <span class="badge-pill badge-pill-info">React</span>
+                    <span class="badge-pill badge-pill-info">MySQL</span>
+                    <span class="badge-pill badge-pill-info">Java</span>
+                    <span class="badge-pill badge-pill-info">REST API</span>
+                </div>
+
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="projects.html" class="btn-pill btn-pill-emerald" style="padding: 9px 22px; font-size: 0.9rem;">
+                        View System Details
+                    </a>
+                    <a href="https://github.com/John-web57" target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline" style="padding: 9px 20px; font-size: 0.9rem;">
+                        GitHub Profile
+                    </a>
+                </div>
+            </div>
+
+            <!-- Other 4 Clean Project Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+                <!-- Project 2 -->
+                <div class="skill-cat-card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-info); text-transform: uppercase;">Content & Media Platform</span>
+                        <h3 style="font-size: 1.2rem; color: var(--heading); margin: 6px 0 8px;">CryptAfrica News Platform</h3>
+                        <p style="font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
+                            High-volume digital publishing platform delivering real-time African crypto, blockchain, and financial technology journalism.
+                        </p>
+                    </div>
+                    <div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 1rem;">
+                            <span class="badge-pill badge-pill-info" style="font-size: 0.78rem; padding: 2px 8px;">React</span>
+                            <span class="badge-pill badge-pill-info" style="font-size: 0.78rem; padding: 2px 8px;">Node.js</span>
+                            <span class="badge-pill badge-pill-info" style="font-size: 0.78rem; padding: 2px 8px;">REST API</span>
+                        </div>
+                        <a href="https://cryptafrica.news" target="_blank" rel="noopener noreferrer" class="service-action-link">Visit cryptafrica.news ↗</a>
                     </div>
                 </div>
-            </article>
 
-            <!-- Project 2 -->
-            <article class="featured-project-card">
-                <h3>
-                    <span class="proj-num" style="background: #2563eb;">2</span>
-                    <span class="text-info">CryptAfrica News Platform</span>
-                </h3>
-                <p class="project-summary">Cryptocurrency and blockchain news publishing platform engineered with high-speed delivery specifically tailored for African technology markets.</p>
-                
-                <div class="project-features-title">Core Capabilities & Modules</div>
-                <ul class="features-checklist">
-                    <li>Advanced SEO optimization and dynamic OpenGraph social indexing</li>
-                    <li>Content organized by African economic and geographic regions</li>
-                    <li>Live article publishing, editorial workflow, and rich media embeds</li>
-                    <li>Real-time news management and breaking updates carousel</li>
-                    <li>Search optimization with instant keyword suggestions</li>
-                    <li>Fast-loading, mobile-first responsive architecture</li>
-                </ul>
-
-                <div style="margin-top: 1.25rem;">
-                    <span style="font-weight: 600; font-size: 0.85rem; color: var(--muted); margin-right: 0.75rem;">TECHNOLOGIES:</span>
-                    <div class="badge-pill-container" style="display: inline-flex; margin: 0;">
-                        <span class="badge-pill badge-pill-info">Node.js</span>
-                        <span class="badge-pill badge-pill-teal">REST APIs</span>
-                        <span class="badge-pill badge-pill-discovery">SEO Architecture</span>
-                        <span class="badge-pill badge-pill-success">Responsive UI</span>
+                <!-- Project 3 -->
+                <div class="skill-cat-card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-discovery); text-transform: uppercase;">Corporate Web Portal</span>
+                        <h3 style="font-size: 1.2rem; color: var(--heading); margin: 6px 0 8px;">JAYTECH Solutions Website</h3>
+                        <p style="font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
+                            Production corporate website for an IT solutions firm with service showcases, lead generation forms, and SEO optimization.
+                        </p>
+                    </div>
+                    <div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 1rem;">
+                            <span class="badge-pill badge-pill-discovery" style="font-size: 0.78rem; padding: 2px 8px;">HTML5</span>
+                            <span class="badge-pill badge-pill-discovery" style="font-size: 0.78rem; padding: 2px 8px;">CSS3</span>
+                            <span class="badge-pill badge-pill-discovery" style="font-size: 0.78rem; padding: 2px 8px;">JavaScript</span>
+                        </div>
+                        <a href="https://jaytech.co.ke" target="_blank" rel="noopener noreferrer" class="service-action-link">Visit jaytech.co.ke ↗</a>
                     </div>
                 </div>
-            </article>
 
-            <!-- Project 3 -->
-            <article class="featured-project-card">
-                <h3>
-                    <span class="proj-num" style="background: #7c3aed;">3</span>
-                    <span class="text-discovery">JAYTECH Solutions Company Website</span>
-                </h3>
-                <p class="project-summary">Corporate company website engineered to showcase commercial software engineering, IT support, and enterprise network infrastructure services.</p>
-                
-                <div class="project-features-title">Core Offerings & Services Showcased</div>
-                <ul class="features-checklist">
-                    <li>Custom software development and web portals</li>
-                    <li>IT infrastructure support and workstation maintenance</li>
-                    <li>Enterprise computer networking and router provisioning</li>
-                    <li>Commercial CCTV security and surveillance installation</li>
-                    <li>Tailored ERP and CRM business process implementations</li>
-                    <li>SEO audits and web page performance tuning</li>
-                </ul>
-
-                <div style="margin-top: 1.25rem;">
-                    <span style="font-weight: 600; font-size: 0.85rem; color: var(--muted); margin-right: 0.75rem;">TECHNOLOGIES:</span>
-                    <div class="badge-pill-container" style="display: inline-flex; margin: 0;">
-                        <span class="badge-pill badge-pill-discovery">HTML5 & CSS3</span>
-                        <span class="badge-pill badge-pill-info">JavaScript</span>
-                        <span class="badge-pill badge-pill-success">SEO Auditing</span>
-                        <span class="badge-pill badge-pill-warning">Business Portals</span>
+                <!-- Project 4 -->
+                <div class="skill-cat-card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-warning); text-transform: uppercase;">Android Application</span>
+                        <h3 style="font-size: 1.2rem; color: var(--heading); margin: 6px 0 8px;">Android Mobile Application</h3>
+                        <p style="font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
+                            Feature-rich native Android application designed with offline SQLite caching, responsive material components, and API sync.
+                        </p>
+                    </div>
+                    <div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 1rem;">
+                            <span class="badge-pill badge-pill-warning" style="font-size: 0.78rem; padding: 2px 8px;">Java</span>
+                            <span class="badge-pill badge-pill-warning" style="font-size: 0.78rem; padding: 2px 8px;">Android Studio</span>
+                            <span class="badge-pill badge-pill-warning" style="font-size: 0.78rem; padding: 2px 8px;">SQLite</span>
+                        </div>
+                        <a href="projects.html" class="service-action-link">View Architecture →</a>
                     </div>
                 </div>
-            </article>
 
-            <!-- Project 4 -->
-            <article class="featured-project-card">
-                <h3>
-                    <span class="proj-num" style="background: #ea580c;">4</span>
-                    <span class="text-warning">Android Mobile Application</span>
-                </h3>
-                <p class="project-summary">Native mobile application developed using Android Studio providing responsive real-time data access and offline-ready local cache.</p>
-                
-                <div class="project-features-title">Core Capabilities & Modules</div>
-                <ul class="features-checklist">
-                    <li>Native Android UI built with modular RecyclerView architecture</li>
-                    <li>Cloud data synchronization with Firebase real-time database</li>
-                    <li>Local SQLite storage for offline record persistence</li>
-                    <li>Clean Material Design layout optimized for touch navigation</li>
-                </ul>
-
-                <div style="margin-top: 1.25rem;">
-                    <span style="font-weight: 600; font-size: 0.85rem; color: var(--muted); margin-right: 0.75rem;">TECHNOLOGIES:</span>
-                    <div class="badge-pill-container" style="display: inline-flex; margin: 0;">
-                        <span class="badge-pill badge-pill-warning">Java</span>
-                        <span class="badge-pill badge-pill-discovery">Firebase</span>
-                        <span class="badge-pill badge-pill-info">SQLite</span>
-                        <span class="badge-pill badge-pill-teal">RecyclerView</span>
+                <!-- Project 5 -->
+                <div class="skill-cat-card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--color-teal); text-transform: uppercase;">Hardware & IoT Telemetry</span>
+                        <h3 style="font-size: 1.2rem; color: var(--heading); margin: 6px 0 8px;">IoT Monitoring System</h3>
+                        <p style="font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">
+                            Connected hardware telemetry unit capturing pH, temperature, and water levels with real-time threshold alert notifications.
+                        </p>
+                    </div>
+                    <div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 1rem;">
+                            <span class="badge-pill badge-pill-teal" style="font-size: 0.78rem; padding: 2px 8px;">C++</span>
+                            <span class="badge-pill badge-pill-teal" style="font-size: 0.78rem; padding: 2px 8px;">Arduino</span>
+                            <span class="badge-pill badge-pill-teal" style="font-size: 0.78rem; padding: 2px 8px;">Sensors</span>
+                        </div>
+                        <a href="projects.html" class="service-action-link">View Telemetry Demo →</a>
                     </div>
                 </div>
-            </article>
-
-            <!-- Project 5 -->
-            <article class="featured-project-card">
-                <h3>
-                    <span class="proj-num" style="background: #0f766e;">5</span>
-                    <span class="text-teal">IoT Monitoring System</span>
-                </h3>
-                <p class="project-summary">Sensor-based environmental and telemetry monitoring system with real-time browser dashboard and automated anomaly alerts.</p>
-                
-                <div class="project-features-title">Core Capabilities & Modules</div>
-                <ul class="features-checklist">
-                    <li>ESP32 microcontroller integration with DHT22 & water quality sensors</li>
-                    <li>Live telemetry web server displaying temperature, humidity, and flow</li>
-                    <li>Automated threshold alerts and relay control triggers</li>
-                    <li>Scalable monitoring adaptable for agricultural greenhouses and server rooms</li>
-                </ul>
-
-                <div style="margin-top: 1.25rem;">
-                    <span style="font-weight: 600; font-size: 0.85rem; color: var(--muted); margin-right: 0.75rem;">TECHNOLOGIES:</span>
-                    <div class="badge-pill-container" style="display: inline-flex; margin: 0;">
-                        <span class="badge-pill badge-pill-teal">ESP32 / Embedded C++</span>
-                        <span class="badge-pill badge-pill-info">Sensors & Telemetry</span>
-                        <span class="badge-pill badge-pill-success">Live Dashboard</span>
-                        <span class="badge-pill badge-pill-warning">Automation</span>
-                    </div>
-                </div>
-            </article>
+            </div>
         </section>
 
         <div class="section-divider"></div>
 
-        <!-- ================= 5. EXPERIENCE TIMELINE ================= -->
+        <!-- ================= 5. EXPERIENCE ================= -->
         <section id="experience" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 05</span>
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+                <div>
+                    <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Experience</span>
+                    <h2 style="font-size: 2.1rem; margin: 4px 0 0;">Hands-On Production Roles</h2>
+                </div>
+                <a href="experience.html" class="service-action-link" style="color: var(--color-info); font-weight: 600; text-decoration: none;">View Full Experience Timeline →</a>
             </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">Work Experience Timeline</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem;">Professional journey and hands-on production roles:</p>
+            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem;">Factual, believable responsibilities across systems administration, tech support, and software engineering:</p>
 
-            <div style="display: flex; flex-direction: column; gap: 2rem;">
+            <div style="display: flex; flex-direction: column; gap: 1.75rem; border-left: 2px solid var(--border); padding-left: 24px; margin-left: 10px;">
                 <!-- Role 1 -->
-                <div class="skill-cat-card" style="border-left: 4px solid #16a34a;">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 0.75rem;">
-                        <div>
-                            <h3 class="text-success" style="font-size: 1.25rem; margin: 0;">IT Support Specialist</h3>
-                            <p style="color: var(--muted); font-size: 0.95rem; margin: 4px 0 0;">CryptAfrica • June 2026 – Present</p>
-                        </div>
-                        <span class="badge-pill badge-pill-success">Current Role</span>
+                <div style="position: relative;">
+                    <span style="position: absolute; left: -31px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: #38bdf8; box-shadow: 0 0 10px #38bdf8;"></span>
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 4px;">
+                        <h3 class="text-success" style="font-size: 1.25rem; margin: 0;">IT Support Specialist</h3>
+                        <span class="badge-pill badge-pill-success" style="font-size: 0.8rem; padding: 3px 10px;">June 2026 – Present • Current Role</span>
                     </div>
-                    <ul class="features-checklist" style="margin-top: 0.75rem;">
-                        <li>Providing comprehensive IT support and troubleshooting for corporate staff</li>
-                        <li>Diagnosing and resolving local network and internet connectivity incidents</li>
-                        <li>Managing Windows and Linux workstation operating environments</li>
-                        <li>Configuring and maintaining network printers and peripheral hardware</li>
-                        <li>Supporting day-to-day business applications, dashboards, and databases</li>
-                        <li>Administering user accounts, access permissions, and identity security</li>
-                        <li>Enforcing workplace cybersecurity hygiene and best practices</li>
+                    <p style="font-weight: 600; color: var(--heading); margin: 0 0 8px;">CryptAfrica • Full-time</p>
+                    <ul style="color: var(--text); font-size: 0.95rem; line-height: 1.7; padding-left: 20px; margin: 0;">
+                        <li>Provide practical technical support for Windows workstations, office software, and network connectivity.</li>
+                        <li>Maintain and operate internal staff attendance and daily work management software.</li>
+                        <li>Diagnose and troubleshoot hardware, printer, peripheral, and operating system incidents.</li>
+                        <li>Perform routine system maintenance, software installations, access controls, and data backups.</li>
+                        <li>Track IT equipment and support onboarding for company team members.</li>
                     </ul>
                 </div>
 
                 <!-- Role 2 -->
-                <div class="skill-cat-card" style="border-left: 4px solid #2563eb;">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 0.75rem;">
-                        <div>
-                            <h3 class="text-info" style="font-size: 1.25rem; margin: 0;">Software Developer & IT Support Intern</h3>
-                            <p style="color: var(--muted); font-size: 0.95rem; margin: 4px 0 0;">iGamingAfrica</p>
-                        </div>
-                        <span class="badge-pill badge-pill-info">Engineering Internship</span>
+                <div style="position: relative;">
+                    <span style="position: absolute; left: -31px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-info);"></span>
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 4px;">
+                        <h3 class="text-info" style="font-size: 1.25rem; margin: 0;">Software Developer & IT Support Intern</h3>
+                        <span class="badge-pill badge-pill-info" style="font-size: 0.8rem; padding: 3px 10px;">Internship</span>
                     </div>
-                    <ul class="features-checklist" style="margin-top: 0.75rem;">
-                        <li>Assisting in full-stack software development and feature engineering</li>
-                        <li>Delivering prompt technical support to resolve internal systems issues</li>
-                        <li>Managing web application deployments and content integrity</li>
-                        <li>Performing routine system maintenance and database query optimizations</li>
+                    <p style="font-weight: 600; color: var(--heading); margin: 0 0 8px;">iGamingAfrica</p>
+                    <ul style="color: var(--text); font-size: 0.95rem; line-height: 1.7; padding-left: 20px; margin: 0;">
+                        <li>Built and maintained functional web modules and database-driven software features.</li>
+                        <li>Provided first-line IT technical assistance to staff members across departments.</li>
+                        <li>Configured local workstations, routers, and peripheral equipment for optimal uptime.</li>
+                        <li>Documented troubleshooting steps and created technical manuals for common issues.</li>
                     </ul>
                 </div>
             </div>
@@ -431,491 +483,219 @@
 
         <div class="section-divider"></div>
 
-        <!-- ================= 6. EDUCATION ================= -->
-        <section id="education" style="padding: 20px 0;">
+        <!-- ================= 6. SKILLS & TECHNOLOGIES ================= -->
+        <section id="skills" style="padding: 20px 0;">
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 06</span>
+                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Skills & Technologies</span>
             </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">Academic Education</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem;">Formal university background and technical coursework:</p>
+            <h2 style="font-size: 2.1rem; margin: 0 0 0.5rem;">Practical Technical Competencies</h2>
+            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem;">Clean, categorized competencies without arbitrary percentage bars:</p>
 
-            <div class="skill-cat-card" style="border-left: 4px solid #16a34a;">
-                <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--color-success-bg); color: var(--color-success); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
-                    </div>
-                    <div>
-                        <h3 style="font-size: 1.25rem; margin: 0 0 4px; color: var(--text);">Bachelor of Science in Information Technology</h3>
-                        <p class="text-success" style="font-size: 1rem; margin: 0 0 4px; font-weight: 700;">Dedan Kimathi University of Technology (DeKUT)</p>
-                        <p style="font-size: 0.9rem; color: var(--muted); margin: 0 0 1.25rem;">Graduated: <strong>2026</strong></p>
-                    </div>
-                </div>
-
-                <div style="margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
-                    <p style="font-weight: 600; font-size: 0.92rem; color: var(--text); margin-bottom: 0.75rem;">Relevant Coursework Completed:</p>
-                    <div class="additional-skills-wrap">
-                        <span class="badge-pill badge-pill-success">Software Engineering</span>
-                        <span class="badge-pill badge-pill-info">Networking</span>
-                        <span class="badge-pill badge-pill-discovery">Cybersecurity</span>
-                        <span class="badge-pill badge-pill-warning">Database Systems</span>
-                        <span class="badge-pill badge-pill-teal">Web Development</span>
-                        <span class="badge-pill badge-pill-success">Operating Systems</span>
-                        <span class="badge-pill badge-pill-info">Computer Networks</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- ================= 7. CERTIFICATIONS ================= -->
-        <section id="certifications" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 07</span>
-            </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">Professional Certifications</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.75rem;">Industry credentials verified by Cisco Networking Academy and Huawei Kenya:</p>
-
-            <div class="tech-stack-table-card">
-                <table class="tech-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 60%;">Certification / Award</th>
-                            <th>Issuing Body</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: 600; color: var(--text);">Cisco Introduction to Networking</td>
-                            <td style="color: var(--muted);">Cisco Networking Academy</td>
-                            <td><span class="badge-pill badge-pill-success">Verified ✓</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 600; color: var(--text);">Cisco Network Security</td>
-                            <td style="color: var(--muted);">Cisco Networking Academy</td>
-                            <td><span class="badge-pill badge-pill-success">Verified ✓</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 600; color: var(--text);">Cisco Cybersecurity Essentials</td>
-                            <td style="color: var(--muted);">Cisco Networking Academy</td>
-                            <td><span class="badge-pill badge-pill-success">Verified ✓</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 600; color: var(--text);">Cisco Introduction to IoT</td>
-                            <td style="color: var(--muted);">Cisco Networking Academy</td>
-                            <td><span class="badge-pill badge-pill-success">Verified ✓</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: 600; color: var(--text);">Huawei Hackathon Winner (1st Place)</td>
-                            <td style="color: var(--muted);">Huawei Kenya</td>
-                            <td><span class="badge-pill badge-pill-warning">Champion 🏆</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- ================= 8. TECHNICAL STACK MATRIX ================= -->
-        <section id="tech-stack" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 08</span>
-            </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">Technical Stack</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.75rem;">Tools, frameworks, and runtime environments used across production:</p>
-
-            <div class="tech-stack-table-card">
-                <table class="tech-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 25%;">Layer</th>
-                            <th>Technologies & Tools</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="tech-category-cell">Backend</td>
-                            <td class="tech-values-cell">Java, Spring Boot, REST APIs</td>
-                        </tr>
-                        <tr>
-                            <td class="tech-category-cell">Frontend</td>
-                            <td class="tech-values-cell">React, HTML5, CSS3, JavaScript</td>
-                        </tr>
-                        <tr>
-                            <td class="tech-category-cell">Database</td>
-                            <td class="tech-values-cell">MySQL, Firebase, SQLite</td>
-                        </tr>
-                        <tr>
-                            <td class="tech-category-cell">Tools</td>
-                            <td class="tech-values-cell">Git, GitHub, VS Code, IntelliJ IDEA, Android Studio</td>
-                        </tr>
-                        <tr>
-                            <td class="tech-category-cell">IT Tools</td>
-                            <td class="tech-values-cell">Windows Server, Linux, Microsoft Office, Networking Tools</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- ================= 9. SERVICES SECTION ================= -->
-        <section id="services" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">SERVICES</span>
-            </div>
-            <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin: 0 0 0.75rem;">Technology solutions built around real business needs.</h2>
-            <p style="color: var(--muted); font-size: 1.1rem; line-height: 1.7; max-width: 820px; margin: 0 0 2rem;">
-                I design, develop, support, and maintain practical technology solutions that help businesses operate more efficiently and securely.
-            </p>
-
-            <div class="skills-grid-2x2">
-                <!-- 1. IT Support & Technical Troubleshooting -->
-                <div class="skill-cat-card" style="border-top: 3px solid #ea580c;">
-                    <div class="skill-cat-header">
-                        <span style="font-size: 1.5rem;">🛠️</span>
-                        <h3 class="skill-cat-title text-warning">1. IT Support & Technical Troubleshooting</h3>
-                    </div>
-                    <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.75rem;">Provide practical technical support for businesses and individuals.</p>
-                    <ul class="features-checklist" style="grid-template-columns: 1fr; margin-bottom: 1rem;">
-                        <li>Windows installation and configuration</li>
-                        <li>Hardware and software troubleshooting</li>
-                        <li>Printer and peripheral setup</li>
-                        <li>User account and system support</li>
-                        <li>Microsoft Office support</li>
-                        <li>System maintenance</li>
-                        <li>Technical issue diagnosis</li>
-                    </ul>
-                    <a href="contact.html?service=it-support" class="btn-pill btn-pill-outline" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; width: 100%; justify-content: center;">Inquire for IT Support</a>
-                </div>
-
-                <!-- 2. Software Development -->
-                <div class="skill-cat-card" style="border-top: 3px solid #16a34a;">
-                    <div class="skill-cat-header">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+                <!-- 1. Development -->
+                <div class="skill-cat-card" style="padding: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.75rem;">
                         <span style="font-size: 1.5rem;">💻</span>
-                        <h3 class="skill-cat-title text-success">2. Software Development</h3>
+                        <h3 style="font-size: 1.15rem; color: var(--color-info); margin: 0;">Development</h3>
                     </div>
-                    <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.75rem;">Build practical software solutions for business and organizational needs.</p>
-                    <ul class="features-checklist" style="grid-template-columns: 1fr; margin-bottom: 1rem;">
-                        <li>Web applications</li>
-                        <li>Desktop applications</li>
-                        <li>Business management systems</li>
-                        <li>REST API development</li>
-                        <li>Database-driven applications</li>
-                        <li>System integrations</li>
-                        <li>Custom software solutions</li>
-                    </ul>
-                    <a href="contact.html?service=software" class="btn-pill btn-pill-outline" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; width: 100%; justify-content: center;">Start a Software Project</a>
+                    <p style="color: var(--text); font-size: 0.95rem; line-height: 1.8; margin: 0;">
+                        Java · JavaScript · React · Spring Boot · HTML5 · CSS3 · REST APIs
+                    </p>
                 </div>
 
-                <!-- 3. Web Development -->
-                <div class="skill-cat-card" style="border-top: 3px solid #2563eb;">
-                    <div class="skill-cat-header">
-                        <span style="font-size: 1.5rem;">🌐</span>
-                        <h3 class="skill-cat-title text-info">3. Web Development</h3>
+                <!-- 2. Databases -->
+                <div class="skill-cat-card" style="padding: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.75rem;">
+                        <span style="font-size: 1.5rem;">🗄️</span>
+                        <h3 style="font-size: 1.15rem; color: var(--color-info); margin: 0;">Databases</h3>
                     </div>
-                    <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.75rem;">Create responsive and professional websites.</p>
-                    <ul class="features-checklist" style="grid-template-columns: 1fr; margin-bottom: 1rem;">
-                        <li>Business websites</li>
-                        <li>Portfolio websites</li>
-                        <li>Content platforms</li>
-                        <li>Admin dashboards</li>
-                        <li>Responsive UI development</li>
-                        <li>Website maintenance</li>
-                        <li>Frontend development</li>
-                    </ul>
-                    <a href="contact.html?service=web" class="btn-pill btn-pill-outline" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; width: 100%; justify-content: center;">Build a Website</a>
+                    <p style="color: var(--text); font-size: 0.95rem; line-height: 1.8; margin: 0;">
+                        MySQL · Firebase · SQLite
+                    </p>
                 </div>
 
-                <!-- 4. Networking & Systems -->
-                <div class="skill-cat-card" style="border-top: 3px solid #0f766e;">
-                    <div class="skill-cat-header">
+                <!-- 3. IT Support -->
+                <div class="skill-cat-card" style="padding: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.75rem;">
+                        <span style="font-size: 1.5rem;">🛠️</span>
+                        <h3 style="font-size: 1.15rem; color: var(--color-info); margin: 0;">IT Support</h3>
+                    </div>
+                    <p style="color: var(--text); font-size: 0.95rem; line-height: 1.8; margin: 0;">
+                        Windows · Linux · Hardware Troubleshooting · Printers & Peripherals · Microsoft Office
+                    </p>
+                </div>
+
+                <!-- 4. Networking -->
+                <div class="skill-cat-card" style="padding: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.75rem;">
                         <span style="font-size: 1.5rem;">🔌</span>
-                        <h3 class="skill-cat-title text-teal">4. Networking & Systems</h3>
+                        <h3 style="font-size: 1.15rem; color: var(--color-info); margin: 0;">Networking</h3>
                     </div>
-                    <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.75rem;">Help organizations set up and maintain reliable IT infrastructure.</p>
-                    <ul class="features-checklist" style="grid-template-columns: 1fr; margin-bottom: 1rem;">
-                        <li>LAN/WAN configuration</li>
-                        <li>Router and switch configuration</li>
-                        <li>Network troubleshooting</li>
-                        <li>IP addressing</li>
-                        <li>Network device setup</li>
-                        <li>Windows/Linux systems support</li>
-                        <li>Basic server administration</li>
-                    </ul>
-                    <a href="contact.html?service=networking" class="btn-pill btn-pill-outline" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; width: 100%; justify-content: center;">Inquire for Networking</a>
+                    <p style="color: var(--text); font-size: 0.95rem; line-height: 1.8; margin: 0;">
+                        TCP/IP · LAN/WAN · Routers · Switches · DNS · DHCP
+                    </p>
                 </div>
 
                 <!-- 5. Cybersecurity -->
-                <div class="skill-cat-card" style="border-top: 3px solid #7c3aed;">
-                    <div class="skill-cat-header">
+                <div class="skill-cat-card" style="padding: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.75rem;">
                         <span style="font-size: 1.5rem;">🛡️</span>
-                        <h3 class="skill-cat-title text-discovery">5. Cybersecurity</h3>
+                        <h3 style="font-size: 1.15rem; color: var(--color-info); margin: 0;">Cybersecurity</h3>
                     </div>
-                    <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.75rem;">Apply security-focused practices to systems and networks.</p>
-                    <ul class="features-checklist" style="grid-template-columns: 1fr; margin-bottom: 1rem;">
-                        <li>Network security</li>
-                        <li>Vulnerability assessment</li>
-                        <li>Security configuration</li>
-                        <li>Basic penetration testing</li>
-                        <li>Access control</li>
-                        <li>Security monitoring</li>
-                        <li>Cybersecurity best practices</li>
-                    </ul>
-                    <a href="contact.html?service=cybersecurity" class="btn-pill btn-pill-outline" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; width: 100%; justify-content: center;">Book Security Review</a>
+                    <p style="color: var(--text); font-size: 0.95rem; line-height: 1.8; margin: 0;">
+                        Network Security · Vulnerability Assessment · Security Best Practices
+                    </p>
                 </div>
 
-                <!-- 6. SEO & Website Optimization -->
-                <div class="skill-cat-card" style="border-top: 3px solid #16a34a;">
-                    <div class="skill-cat-header">
-                        <span style="font-size: 1.5rem;">📈</span>
-                        <h3 class="skill-cat-title text-success">6. SEO & Website Optimization</h3>
-                    </div>
-                    <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.75rem;">Improve website visibility and technical performance.</p>
-                    <ul class="features-checklist" style="grid-template-columns: 1fr; margin-bottom: 1rem;">
-                        <li>Keyword research</li>
-                        <li>On-page SEO</li>
-                        <li>Meta titles and descriptions</li>
-                        <li>Content optimization</li>
-                        <li>Technical SEO</li>
-                        <li>Search engine indexing</li>
-                        <li>Website performance improvements</li>
-                    </ul>
-                    <a href="contact.html?service=seo" class="btn-pill btn-pill-outline" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; width: 100%; justify-content: center;">Optimize Search Visibility</a>
-                </div>
-
-                <!-- 7. Mobile Application Development -->
-                <div class="skill-cat-card" style="border-top: 3px solid #ea580c;">
-                    <div class="skill-cat-header">
-                        <span style="font-size: 1.5rem;">📱</span>
-                        <h3 class="skill-cat-title text-warning">7. Mobile Application Development</h3>
-                    </div>
-                    <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.75rem;">Develop Android applications for practical use cases.</p>
-                    <ul class="features-checklist" style="grid-template-columns: 1fr; margin-bottom: 1rem;">
-                        <li>Android applications</li>
-                        <li>Java/Kotlin development</li>
-                        <li>Firebase integration</li>
-                        <li>SQLite databases</li>
-                        <li>REST API integration</li>
-                        <li>UI/UX implementation</li>
-                        <li>Application testing</li>
-                    </ul>
-                    <a href="contact.html?service=mobile" class="btn-pill btn-pill-outline" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; width: 100%; justify-content: center;">Build an Android App</a>
-                </div>
-
-                <!-- 8. IT Systems & Business Solutions -->
-                <div class="skill-cat-card" style="border-top: 3px solid #2563eb;">
-                    <div class="skill-cat-header">
+                <!-- 6. Tools -->
+                <div class="skill-cat-card" style="padding: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.75rem;">
                         <span style="font-size: 1.5rem;">⚙️</span>
-                        <h3 class="skill-cat-title text-info">8. IT Systems & Business Solutions</h3>
+                        <h3 style="font-size: 1.15rem; color: var(--color-info); margin: 0;">Tools</h3>
                     </div>
-                    <p style="color: var(--text); font-size: 0.95rem; margin-bottom: 0.75rem;">Develop systems that help organizations manage their daily operations.</p>
-                    <ul class="features-checklist" style="grid-template-columns: 1fr; margin-bottom: 1rem;">
-                        <li>Attendance management systems</li>
-                        <li>Employee management systems</li>
-                        <li>Asset management systems</li>
-                        <li>Content management platforms</li>
-                        <li>Expense and leave management</li>
-                        <li>Reporting systems</li>
-                        <li>Custom internal business tools</li>
-                    </ul>
-                    <a href="contact.html?service=business-systems" class="btn-pill btn-pill-outline" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; width: 100%; justify-content: center;">Build an Enterprise System</a>
-                </div>
-            </div>
-
-            <!-- Bottom CTA Section -->
-            <div class="services-cta-banner" style="margin-top: 40px;">
-                <h3 style="font-size: 1.8rem; margin: 0 0 12px; color: var(--text);">Need a technology solution?</h3>
-                <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin: 0 auto 24px;">
-                    Whether you need technical support, a custom application, a website, network assistance, or cybersecurity guidance, let's discuss your requirements.
-                </p>
-                <div class="services-cta-buttons">
-                    <a href="contact.html" class="btn-pill btn-pill-emerald" style="padding: 12px 28px;">Get in Touch</a>
-                    <a href="projects.html" class="btn-pill btn-pill-outline" style="padding: 12px 28px;">View My Projects</a>
+                    <p style="color: var(--text); font-size: 0.95rem; line-height: 1.8; margin: 0;">
+                        Git · GitHub · VS Code · IntelliJ IDEA · Android Studio
+                    </p>
                 </div>
             </div>
         </section>
 
         <div class="section-divider"></div>
 
-        <!-- ================= 10. GITHUB STATISTICS ================= -->
-        <section id="github-stats" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 10</span>
+        <!-- ================= 7. CERTIFICATIONS & ACHIEVEMENTS ================= -->
+        <section id="certifications" style="padding: 20px 0;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+                <div>
+                    <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Credentials</span>
+                    <h2 style="font-size: 2.1rem; margin: 4px 0 0;">Certifications & Achievements</h2>
+                </div>
+                <a href="certifications.html" class="service-action-link" style="color: var(--color-info); font-weight: 600; text-decoration: none;">View Credentials Details →</a>
             </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">GitHub & Code Activity</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem;">Public repository contributions and code stewardship:</p>
+            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem;">Accredited Cisco Networking Academy credentials and Huawei competition award:</p>
 
-            <div class="github-stats-card">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 1rem;">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: var(--text);"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                        <h3 style="margin: 0; font-size: 1.25rem;">John Omiti Joshua on GitHub</h3>
-                    </div>
-                    <a href="https://github.com/John-web57" target="_blank" rel="noopener noreferrer" class="badge-pill badge-pill-success" style="text-decoration: none;">View GitHub Profile ↗</a>
+            <!-- Cisco Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem;">
+                <div class="skill-cat-card" style="padding: 1.25rem;">
+                    <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; text-transform: uppercase;">Cisco Academy</span>
+                    <h3 style="font-size: 1.05rem; color: var(--heading); margin: 6px 0 4px;">Cisco Introduction to Networking</h3>
+                    <p style="color: var(--muted); font-size: 0.88rem; margin: 0;">Cisco Networking Academy</p>
                 </div>
 
-                <div class="github-metrics-row">
-                    <div class="github-metric-box">
-                        <p class="github-metric-value">30+</p>
-                        <p class="github-metric-label">Repositories & Labs</p>
-                    </div>
-                    <div class="github-metric-box">
-                        <p class="github-metric-value">5</p>
-                        <p class="github-metric-label">Core Languages (Java, JS, SQL, C++, Python)</p>
-                    </div>
-                    <div class="github-metric-box">
-                        <p class="github-metric-value">99.9%</p>
-                        <p class="github-metric-label">Production System Uptime</p>
-                    </div>
-                    <div class="github-metric-box">
-                        <p class="github-metric-value">1st</p>
-                        <p class="github-metric-label">Hackathon Award</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- ================= 11. TESTIMONIALS / RECOMMENDATIONS ================= -->
-        <section id="testimonials" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 11</span>
-            </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">Recommendations & Testimonials</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.75rem;">Endorsements from managers and engineering peers:</p>
-
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">JM</div>
-                        <div>
-                            <h4 class="testimonial-name">Jeremiah Maangi</h4>
-                            <p class="testimonial-role">IT Manager / Supervisor</p>
-                        </div>
-                    </div>
-                    <blockquote class="testimonial-quote">
-                        “John demonstrated strong technical troubleshooting skills and professionalism while supporting staff and maintaining IT systems.”
-                    </blockquote>
+                <div class="skill-cat-card" style="padding: 1.25rem;">
+                    <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; text-transform: uppercase;">Cisco Academy</span>
+                    <h3 style="font-size: 1.05rem; color: var(--heading); margin: 6px 0 4px;">Cisco Network Security</h3>
+                    <p style="color: var(--muted); font-size: 0.88rem; margin: 0;">Cisco Networking Academy</p>
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar" style="color: var(--color-info); background: var(--color-info-bg); font-weight: 700;">PC</div>
-                        <div>
-                            <h4 class="testimonial-name">Project Collaborator</h4>
-                            <p class="testimonial-role">Software Development Team</p>
-                        </div>
-                    </div>
-                    <blockquote class="testimonial-quote">
-                        “He builds practical software solutions and works well in collaborative environments.”
-                    </blockquote>
+                <div class="skill-cat-card" style="padding: 1.25rem;">
+                    <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; text-transform: uppercase;">Cisco Academy</span>
+                    <h3 style="font-size: 1.05rem; color: var(--heading); margin: 6px 0 4px;">Cisco Cybersecurity Essentials</h3>
+                    <p style="color: var(--muted); font-size: 0.88rem; margin: 0;">Cisco Networking Academy</p>
+                </div>
+
+                <div class="skill-cat-card" style="padding: 1.25rem;">
+                    <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; text-transform: uppercase;">Cisco Academy</span>
+                    <h3 style="font-size: 1.05rem; color: var(--heading); margin: 6px 0 4px;">Cisco Introduction to IoT</h3>
+                    <p style="color: var(--muted); font-size: 0.88rem; margin: 0;">Cisco Networking Academy</p>
+                </div>
+            </div>
+
+            <!-- Achievement Highlights & Education Summary -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;">
+                <div class="skill-cat-card" style="padding: 1.5rem; border: 1px solid rgba(56, 189, 248, 0.4);">
+                    <span style="font-size: 1.5rem; display: inline-block; margin-bottom: 6px;">🏆</span>
+                    <h3 style="font-size: 1.2rem; color: var(--heading); margin: 0 0 6px;">Huawei Hackathon — 1st Place Winner</h3>
+                    <p style="color: var(--text); font-size: 0.95rem; line-height: 1.6; margin: 0 0 8px;">
+                        Awarded 1st Place for Best Android Application engineered during the national competition by Huawei Kenya.
+                    </p>
+                    <span class="badge-pill badge-pill-warning">Huawei Kenya Official Award</span>
+                </div>
+
+                <div class="skill-cat-card" style="padding: 1.5rem;">
+                    <span style="font-size: 1.5rem; display: inline-block; margin-bottom: 6px;">🎓</span>
+                    <h3 style="font-size: 1.2rem; color: var(--heading); margin: 0 0 6px;">BSc in Information Technology</h3>
+                    <p style="color: var(--text); font-size: 0.95rem; line-height: 1.6; margin: 0 0 8px;">
+                        Dedan Kimathi University of Technology (DeKUT) • Graduated 2026.
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--muted); margin: 0;">
+                        Software Engineering · Networking · Cybersecurity · Database Systems · Web Development
+                    </p>
                 </div>
             </div>
         </section>
 
         <div class="section-divider"></div>
 
-        <!-- ================= 12. BLOG / TECHNICAL ARTICLES ================= -->
+        <!-- ================= 8. LATEST ARTICLES (Blog) ================= -->
         <section id="blog" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 12</span>
-            </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">Blog & Technical Articles</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.5rem;">Insights, tutorials, and practical cybersecurity guides:</p>
-
-            <div class="skills-grid-2x2">
-                <div class="skill-cat-card">
-                    <span class="badge-pill badge-pill-discovery" style="margin-bottom: 8px;">Cybersecurity</span>
-                    <h3 style="font-size: 1.15rem; margin: 0 0 6px;"><a href="blog.html" style="text-decoration: none; color: inherit;">Securing Enterprise Endpoints in Modern Remote Work</a></h3>
-                    <p style="color: var(--muted); font-size: 0.9rem; margin: 0;">Practical firewall configurations, access permissions, and phishing mitigation for corporate teams.</p>
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+                <div>
+                    <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Blog</span>
+                    <h2 style="font-size: 2.1rem; margin: 4px 0 0;">Latest Articles</h2>
                 </div>
-                <div class="skill-cat-card">
-                    <span class="badge-pill badge-pill-success" style="margin-bottom: 8px;">IT Support Tips</span>
-                    <h3 style="font-size: 1.15rem; margin: 0 0 6px;"><a href="blog.html" style="text-decoration: none; color: inherit;">Essential Diagnostic Playbook for Windows Network Outages</a></h3>
-                    <p style="color: var(--muted); font-size: 0.9rem; margin: 0;">Step-by-step diagnostic workflow using PowerShell, netsh, and packet tracing for rapid recovery.</p>
-                </div>
-                <div class="skill-cat-card">
-                    <span class="badge-pill badge-pill-info" style="margin-bottom: 8px;">Networking</span>
-                    <h3 style="font-size: 1.15rem; margin: 0 0 6px;"><a href="blog.html" style="text-decoration: none; color: inherit;">VLAN Architecture & Subnet Planning for Small Businesses</a></h3>
-                    <p style="color: var(--muted); font-size: 0.9rem; margin: 0;">Segmenting traffic effectively between guest networks, servers, and staff terminals.</p>
-                </div>
-                <div class="skill-cat-card">
-                    <span class="badge-pill badge-pill-teal" style="margin-bottom: 8px;">Software Development</span>
-                    <h3 style="font-size: 1.15rem; margin: 0 0 6px;"><a href="blog.html" style="text-decoration: none; color: inherit;">Building Resilient REST APIs with Spring Boot and React</a></h3>
-                    <p style="color: var(--muted); font-size: 0.9rem; margin: 0;">Best practices for token authentication, transaction rollbacks, and clean error reporting.</p>
-                </div>
+                <a href="blog.html" class="service-action-link" style="color: var(--color-info); font-weight: 600; text-decoration: none;">View All Articles →</a>
             </div>
+            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem;">Technical perspectives on cybersecurity, IT support, and software systems:</p>
 
-            <div style="margin-top: 1.5rem; text-align: center;">
-                <a href="blog.html" class="btn-pill btn-pill-outline">Read All Technical Articles →</a>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- ================= 13. ACHIEVEMENTS ================= -->
-        <section id="achievements" style="padding: 20px 0;">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 13</span>
-            </div>
-            <h2 style="font-size: 1.85rem; margin: 0 0 0.5rem;">Key Achievements</h2>
-            <p style="color: var(--muted); font-size: 1.05rem; margin-bottom: 1.75rem;">Honors, competitive distinctions, and recognized milestones:</p>
-
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon-box" style="background: var(--color-warning-bg); color: var(--color-warning); font-weight: 700;">
-                        🏆
-                    </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <!-- Article 1 -->
+                <div class="skill-cat-card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
-                        <h4 style="margin: 0 0 4px; font-size: 1.05rem; color: var(--text);">Huawei Hackathon – First Place</h4>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--muted);">Best Android Application development and innovation winner, Huawei Kenya.</p>
+                        <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; text-transform: uppercase;">Cybersecurity</span>
+                        <h3 style="font-size: 1.15rem; color: var(--heading); margin: 8px 0 10px; line-height: 1.4;">
+                            Practical Endpoint Security & Phishing Defense for Growing Businesses
+                        </h3>
+                        <p style="font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin: 0 0 1rem;">
+                            How small and medium teams can implement defense-in-depth, robust multi-factor authentication, and user security policies.
+                        </p>
                     </div>
+                    <a href="blog.html" class="service-action-link">Read Article →</a>
                 </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon-box" style="background: var(--color-info-bg); color: var(--color-info); font-weight: 700;">
-                        🎓
-                    </div>
+
+                <!-- Article 2 -->
+                <div class="skill-cat-card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
-                        <h4 style="margin: 0 0 4px; font-size: 1.05rem; color: var(--text);">Cisco Certified Series</h4>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--muted);">Completed 6 comprehensive professional certifications in Networking, Cybersecurity & IoT.</p>
+                        <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; text-transform: uppercase;">IT Support</span>
+                        <h3 style="font-size: 1.15rem; color: var(--heading); margin: 8px 0 10px; line-height: 1.4;">
+                            Step-by-Step Windows & Hardware Troubleshooting for Remote Workstations
+                        </h3>
+                        <p style="font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin: 0 0 1rem;">
+                            A systematic checklist for resolving peripheral setup, network adapter crashes, and operating system recovery.
+                        </p>
                     </div>
+                    <a href="blog.html" class="service-action-link">Read Article →</a>
                 </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon-box" style="background: var(--color-success-bg); color: var(--color-success); font-weight: 700;">
-                        💼
-                    </div>
+
+                <!-- Article 3 -->
+                <div class="skill-cat-card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
-                        <h4 style="margin: 0 0 4px; font-size: 1.05rem; color: var(--text);">IT Support at CryptAfrica</h4>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--muted);">Delivered continuous infrastructure uptime and built the internal staff management system.</p>
+                        <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700; text-transform: uppercase;">Software Development</span>
+                        <h3 style="font-size: 1.15rem; color: var(--heading); margin: 8px 0 10px; line-height: 1.4;">
+                            Architecting Resilient REST APIs with Java & Spring Boot
+                        </h3>
+                        <p style="font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin: 0 0 1rem;">
+                            Key patterns for building reliable, secure, and production-ready APIs that back commercial web applications.
+                        </p>
                     </div>
+                    <a href="blog.html" class="service-action-link">Read Article →</a>
                 </div>
             </div>
         </section>
 
         <div class="section-divider"></div>
 
-        <!-- ================= 14. CONTACT SECTION ================= -->
+        <!-- ================= 9. CONTACT SECTION ================= -->
         <section id="contact" style="padding: 20px 0;">
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Section 14 • Contact Me</span>
+                <span class="text-success" style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Let's Connect</span>
             </div>
-            <h2 style="font-size: 2.2rem; margin: 0 0 0.75rem;">Get in Touch</h2>
-            <p style="font-size: 1.15rem; color: var(--text); line-height: 1.7; max-width: 880px; margin-bottom: 0.75rem;">
-                Have a project, job opportunity, technical question, or collaboration in mind? I would be happy to hear from you.
-            </p>
-            <p style="font-size: 1.05rem; color: var(--muted); line-height: 1.7; max-width: 880px; margin-bottom: 2rem;">
-                Whether you are looking for IT support, software development, networking, website development, or a custom technology solution, feel free to get in touch. You can also connect with me through LinkedIn and GitHub.
+            <h2 style="font-size: 2.2rem; margin: 0 0 0.75rem;">Let's Work Together</h2>
+            <p style="font-size: 1.12rem; color: var(--text); line-height: 1.7; max-width: 860px; margin-bottom: 2rem;">
+                Have a project, job opportunity, or technical challenge? Let's connect. Whether you are looking for IT support, software development, networking, or website development, feel free to reach out.
             </p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-                <!-- Contact Channels -->
+                <!-- Direct Channels -->
                 <div>
                     <h3 style="font-size: 1.25rem; margin: 0 0 1rem; color: var(--heading);">Direct Channels</h3>
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
@@ -963,7 +743,7 @@
                             </div>
                         </div>
 
-                        <!-- Professional Profiles Strip -->
+                        <!-- Profiles -->
                         <div class="skill-cat-card" style="padding: 1.15rem 1.35rem;">
                             <span style="font-size: 0.8rem; color: var(--muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 8px;">Professional Profiles</span>
                             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -1004,12 +784,12 @@
 
         <div class="section-divider"></div>
 
-        <!-- ================= 15. FOOTER ================= -->
+        <!-- ================= 10. FOOTER ================= -->
         <footer class="global-footer" style="padding: 40px 0 20px; border-top: 1px solid var(--border); margin-top: 40px;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
                 <div>
                     <h3 class="text-success" style="margin: 0 0 4px; font-size: 1.4rem;">John Omiti Joshua</h3>
-                    <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">BSc Information Technology Graduate • IT Support Specialist • Software Developer</p>
+                    <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">BSc Information Technology Graduate · IT Support Specialist · Software Developer</p>
                 </div>
 
                 <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
@@ -1027,10 +807,10 @@
 
     </div>
 
-    <!-- Global Floating AI Assistant Launcher & Modal -->
-    <button id="ai-widget-launcher" aria-label="Open AI Assistant Chat" title="Chat with John's AI Assistant">
+    <!-- Floating AI Assistant Launcher (Unobtrusive & Clean) -->
+    <button id="ai-widget-launcher" aria-label="Ask about John's work" title="Ask about John's work">
         <span class="ai-launcher-icon">💬</span>
-        <span class="ai-launcher-ping"></span>
+        <span style="font-size: 0.85rem; font-weight: 600;">Ask About My Work</span>
     </button>
 
     <div id="ai-widget-window" class="ai-widget-panel" role="dialog" aria-label="AI Assistant" aria-hidden="true">
@@ -1038,29 +818,33 @@
             <div class="ai-widget-title-area">
                 <span class="ai-widget-status-dot"></span>
                 <div>
-                    <div class="ai-widget-title">John's Portfolio AI</div>
-                    <div class="ai-widget-subtitle">Online • Ask anything about John</div>
+                    <div class="ai-widget-title">John's Portfolio Assistant</div>
+                    <div class="ai-widget-subtitle">Ready to answer questions about projects & skills</div>
                 </div>
             </div>
-            <button id="ai-widget-close" aria-label="Close chat window" class="ai-widget-btn-icon">✕</button>
+            <button id="ai-widget-close" class="ai-widget-close-btn" aria-label="Close Assistant">✕</button>
         </div>
-        <div class="ai-widget-body" id="ai-widget-messages">
-            <div class="ai-msg bot">
-                Hello! I am John's portfolio AI assistant. Ask me about John's work at CryptAfrica, his degrees, skills, or projects!
+
+        <div id="ai-widget-messages" class="ai-widget-messages">
+            <div class="ai-bubble ai-bubble-bot">
+                Hi! I'm John's portfolio assistant. I can help you learn about John's projects, skills, experience and certifications. How can I help you today?
             </div>
         </div>
-        <div class="ai-widget-suggestions">
-            <button type="button" class="ai-widget-chip" data-prompt="What are John's core skills and tech stack?">Skills & Stack</button>
-            <button type="button" class="ai-widget-chip" data-prompt="Tell me about the CryptAfrica Staff Attendance System">Attendance System</button>
-            <button type="button" class="ai-widget-chip" data-prompt="What are your Cisco and Huawei certifications?">Certifications</button>
-            <button type="button" class="ai-widget-chip" data-prompt="How can I contact John for an IT Support or Software Developer role?">Hire John</button>
+
+        <div class="ai-widget-chips">
+            <button type="button" class="ai-widget-chip" data-prompt="What are John's core technical skills?">Skills</button>
+            <button type="button" class="ai-widget-chip" data-prompt="Tell me about John's CryptAfrica Attendance System project.">Featured Project</button>
+            <button type="button" class="ai-widget-chip" data-prompt="What are John's contact details?">Contact</button>
+            <button type="button" class="ai-widget-chip" data-prompt="How can I download his CV?">Download CV</button>
         </div>
-        <form class="ai-widget-input-form" id="ai-widget-form">
-            <input type="text" id="ai-widget-input" placeholder="Ask about projects, skills, education..." autocomplete="off">
-            <button type="submit" class="ai-widget-send-btn">Send</button>
+
+        <form id="ai-widget-form" class="ai-widget-input-area">
+            <input type="text" id="ai-widget-input" placeholder="Ask about projects, roles, certifications..." autocomplete="off">
+            <button type="submit" class="ai-widget-send-btn" aria-label="Send query">➤</button>
         </form>
     </div>
 
+    <!-- Scripts -->
     <script src="theme-toggle.js"></script>
     <script src="portfolio-ui.js"></script>
 </body>
